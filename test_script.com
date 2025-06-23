@@ -1,6 +1,6 @@
 
 %mem=20GB
-# opt external=" python utils.py"
+#p opt=(calcall,nomicro,noeigentest) external=" python utils.py"  
 
 test external
 
@@ -10,10 +10,4 @@ test external
  H                 -0.45215072    0.79851583    0.87365150
  H                 -0.45215072    0.79851583   -0.87365150
  H                 -1.87882356    0.29413083    0.00000000
-
- 1 2 1.0 3 1.0 4 1.0 5 1.0
- 2
- 3
- 4
- 5
 

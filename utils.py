@@ -1,4 +1,5 @@
-from pyscf import gto, scf
+from pyscf import gto, scf,lib
+from pyscf.hessian import thermo 
 import sys
 import os
 import numpy as np
@@ -15,6 +16,7 @@ def read_gauss_input(ifile):
     tokens = gau_input[0].split()
 
     natoms = int(tokens[0])
+    deriv = int(tokens[1])
     chrg = int(tokens[2])
     spin = int(tokens[3]) -1 
     coords = np.empty((natoms, 4))
@@ -23,7 +25,7 @@ def read_gauss_input(ifile):
         line = line.split()
         line_re = line[:-1]
         coords[i] = line_re
-    return natoms, chrg, spin, coords
+    return natoms, chrg, spin, coords, deriv
 
 def convert_to_xyz(data):
     coord_empty = ''
@@ -51,8 +53,28 @@ def pyscf_inp():
     grad = g.kernel()
     return grad, scf_ener, nuc_ener
 
+def pyscf_inp_hess(natoms):
+    mol=gto.Mole()
+    mol.spin = s
+    mol.charge = c
+    mol.basis = basis
+    mol.atom = cr
+    mol.unit = 'bohr'
+    mol.verbose = 4
+    mol.build()
+    mf = scf.RHF(mol)
+    scf_ener = mf.scf()
+    nuc_ener = mf.energy_nuc()
+    g = mf.nuc_grad_method()
+    grad = g.kernel()
+    hess = mf.Hessian().kernel()
+    hess_2d = hess.transpose(0,2,1,3).reshape(natoms*3,natoms*3)
+    lower_hess = hess_2d[np.tril_indices(hess_2d.shape[0])]
+    hess_f = lower_hess.reshape(int(lower_hess.shape[0]/3),3)
+    return grad, scf_ener, nuc_ener, hess_f
 
-def read_gauss_out(ofile, energy, natoms, gradient):
+
+def read_gauss_out(ofile, energy, natoms, gradient, hessian=None):
 
     headformat = ff.FortranRecordWriter("4D20.12")
     bodyformat = ff.FortranRecordWriter("3D20.12")
@@ -65,11 +87,10 @@ def read_gauss_out(ofile, energy, natoms, gradient):
     for i in range(natoms):
         output = bodyformat.write(gradient[i])
         f.write(output + "\n")
-
-    # polarizability and dipole derivatives are set to zero
+    
+        # polarizability and dipole derivatives are set to zero
     polarizability = np.zeros((2, 3))
     dipole_derivative = np.zeros((3 * natoms, 3))
-
     for i in range(2):
         output = bodyformat.write(polarizability[i])
         f.write(output + "\n")
@@ -78,11 +99,25 @@ def read_gauss_out(ofile, energy, natoms, gradient):
         output = bodyformat.write(dipole_derivative[i])
         f.write(output + "\n")
 
+
+    if hessian is not None:
+        for i in hessian:
+            output = bodyformat.write(i)
+            f.write(output + "\n")
+            print(output)
+
+
     f.close()
 
 
 if __name__=="__main__":
-    n , c, s, coord = read_gauss_input(ifile)
+    n , c, s, coord, deriv = read_gauss_input(ifile)
     cr = convert_to_xyz(coord)
-    gradient, energy_scf, energy_nuc = pyscf_inp()
-    read_gauss_out(ofile, energy_scf, n, gradient)
+    if deriv ==1:
+        gradient, energy_scf, energy_nuc = pyscf_inp()
+        read_gauss_out(ofile, energy_scf, n, gradient)
+    elif deriv ==2:
+        gradient, energy_scf, energy_nuc, hessian = pyscf_inp_hess(n)
+        read_gauss_out(ofile, energy_scf, n, gradient, hessian=hessian)
+    
+

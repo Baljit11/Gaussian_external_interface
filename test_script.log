@@ -2,8 +2,8 @@
  Input=test_script.com
  Output=test_script.log
  Initial command:
- /curc/sw/install/gaussian/g16_c.02/g16/l1.exe "/scratch/local/7972752/Gau-1467023.inp" -scrdir="/scratch/local/7972752/"
- Entering Link 1 = /curc/sw/install/gaussian/g16_c.02/g16/l1.exe PID=   1467024.
+ /curc/sw/install/gaussian/g16_c.02/g16/l1.exe "/scratch/local/15123732/Gau-142985.inp" -scrdir="/scratch/local/15123732/"
+ Entering Link 1 = /curc/sw/install/gaussian/g16_c.02/g16/l1.exe PID=    142986.
   
  Copyright (c) 1988-2021, Gaussian, Inc.  All Rights Reserved.
   
@@ -76,29 +76,33 @@
  
  ******************************************
  Gaussian 16:  ES64L-G16RevC.02  7-Dec-2021
-                10-Sep-2024 
+                23-Jun-2025 
  ******************************************
  %mem=20GB
- ---------------------------------
- # opt external=" python utils.py"
- ---------------------------------
- 1/6=10,10=10,18=4000020,19=15,26=1,38=1/1,3;
+ ----------------------------------------------------------------
+ #p opt=(calcall,nomicro,noeigentest) external=" python utils.py"
+ ----------------------------------------------------------------
+ 1/10=4,11=1,18=20,19=15,26=1,38=1/1,3;
  2/9=110,12=2,17=6,18=5,40=1/2;
- 3/11=9,25=1,30=1,41=9900000,43=2,71=1/1;
- 4/20=17,22=1001,24=3,113=1,114=1/2;
- 6/7=2,8=2,9=2,10=2/1;
- 7/44=-1/16;
- 1/6=10,10=10,18=4000020,19=15,26=1/3(2);
+ 3/11=9,25=1,30=1,41=9900000,43=2,71=2,140=1/1;
+ 4/20=17,22=2,24=3,113=1,114=1/2;
+ 6/7=2,8=2,9=2,10=2,18=1/1;
+ 7/25=1,44=-1/16;
+ 1/10=4,11=1,18=20,19=15,26=1/3(3);
  2/9=110/2;
+ 7/8=1,9=1,25=1,44=-1/16;
  99//99;
  2/9=110/2;
- 3/11=9,25=1,30=1,41=9900000,43=2,71=1/1;
- 4/16=2,20=17,22=1001,24=3,113=1,114=1/2;
- 7/44=-1/16;
- 1/6=10,10=10,18=4000020,19=15,26=1/3(-4);
+ 3/11=9,25=1,30=1,41=9900000,43=2,71=2,140=1/1;
+ 4/16=2,20=17,22=2,24=3,113=1,114=1/2;
+ 7/25=1,44=-1/16;
+ 1/10=4,11=1,18=20,19=15,26=1/3(-4);
  2/9=110/2;
- 6/7=2,8=2,9=2,10=2/1;
- 99/9=10/99;
+ 6/7=2,8=2,9=2,10=2,18=1/1;
+ 7/8=1,9=1,25=1,44=-1/16;
+ 99//99;
+ Leave Link    1 at Mon Jun 23 02:10:22 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l101.exe)
  -------------
  test external
  -------------
@@ -110,15 +114,55 @@
  H                    -0.45215   0.79852  -0.87365 
  H                    -1.87882   0.29413   0. 
  
+ ITRead=  0  0  0  0  0
+ MicOpt= -1 -1 -1 -1 -1
+ NAtoms=      5 NQM=        5 NQMF=       0 NMMI=      0 NMMIF=      0
+                NMic=       0 NMicF=      0.
+                    Isotopes and Nuclear Properties:
+ (Nuclear quadrupole moments (NQMom) in fm**2, nuclear magnetic moments (NMagM)
+  in nuclear magnetons)
+
+  Atom         1           2           3           4           5
+ IAtWgt=          12           1           1           1           1
+ AtmWgt=  12.0000000   1.0078250   1.0078250   1.0078250   1.0078250
+ NucSpn=           0           1           1           1           1
+ AtZEff=  -0.0000000  -0.0000000  -0.0000000  -0.0000000  -0.0000000
+ NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+ NMagM=    0.0000000   2.7928460   2.7928460   2.7928460   2.7928460
+ AtZNuc=   6.0000000   1.0000000   1.0000000   1.0000000   1.0000000
+ Leave Link  101 at Mon Jun 23 02:10:23 2025, MaxMem=  2684354560 cpu:               0.1 elap:               0.1
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l103.exe)
 
  GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
  Berny optimization.
  Initialization pass.
- No Z-matrix variables, so optimization will use Cartesian coordinates.
- Trust Radius=1.00D-01 FncErr=1.00D-07 GrdErr=1.00D-07 EigMax=2.50D+02 EigMin=1.00D-04
- Number of steps in this run=      2 maximum allowed number of steps=      2.
+                           ----------------------------
+                           !    Initial Parameters    !
+                           ! (Angstroms and Degrees)  !
+ --------------------------                            --------------------------
+ ! Name  Definition              Value          Derivative Info.                !
+ --------------------------------------------------------------------------------
+ ! R1    R(1,2)                  1.07           calculate D2E/DX2 analytically  !
+ ! R2    R(1,3)                  1.07           calculate D2E/DX2 analytically  !
+ ! R3    R(1,4)                  1.07           calculate D2E/DX2 analytically  !
+ ! R4    R(1,5)                  1.07           calculate D2E/DX2 analytically  !
+ ! A1    A(2,1,3)              109.4712         calculate D2E/DX2 analytically  !
+ ! A2    A(2,1,4)              109.4712         calculate D2E/DX2 analytically  !
+ ! A3    A(2,1,5)              109.4712         calculate D2E/DX2 analytically  !
+ ! A4    A(3,1,4)              109.4713         calculate D2E/DX2 analytically  !
+ ! A5    A(3,1,5)              109.4712         calculate D2E/DX2 analytically  !
+ ! A6    A(4,1,5)              109.4712         calculate D2E/DX2 analytically  !
+ ! D1    D(2,1,4,3)           -120.0            calculate D2E/DX2 analytically  !
+ ! D2    D(2,1,5,3)            120.0            calculate D2E/DX2 analytically  !
+ ! D3    D(2,1,5,4)           -120.0            calculate D2E/DX2 analytically  !
+ ! D4    D(3,1,5,4)            120.0            calculate D2E/DX2 analytically  !
+ --------------------------------------------------------------------------------
+ Trust Radius=3.00D-01 FncErr=1.00D-07 GrdErr=1.00D-07 EigMax=2.50D+02 EigMin=1.00D-04
+ Number of steps in this run=     24 maximum allowed number of steps=    100.
  GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
 
+ Leave Link  103 at Mon Jun 23 02:10:23 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l202.exe)
                           Input orientation:                          
  ---------------------------------------------------------------------
  Center     Atomic      Atomic             Coordinates (Angstroms)
@@ -155,7 +199,10 @@
       5          1           0        0.617765   -0.617765   -0.617765
  ---------------------------------------------------------------------
  Rotational constants (GHZ):         164.2463796         164.2463796         164.2463796
+ Leave Link  202 at Mon Jun 23 02:10:23 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l301.exe)
  Standard basis: STO-3G (5D, 7F)
+ Ernie: Thresh=  0.10000D-02 Tol=  0.10000D-05 Strict=F.
  There are     3 symmetry adapted cartesian basis functions of A   symmetry.
  There are     2 symmetry adapted cartesian basis functions of B1  symmetry.
  There are     2 symmetry adapted cartesian basis functions of B2  symmetry.
@@ -167,19 +214,25 @@
      9 basis functions,    27 primitive gaussians,     9 cartesian basis functions
      5 alpha electrons        5 beta electrons
        nuclear repulsion energy        13.6865185999 Hartrees.
+ IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
  NAtoms=    5 NActive=    5 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
  Integral buffers will be    131072 words long.
  Raffenetti 1 integral format.
  Two-electron integral symmetry is turned on.
- External calculation of energy and first derivatives.
+ Leave Link  301 at Mon Jun 23 02:10:23 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l402.exe)
+ External calculation of energy, first and second derivatives.
  Running external command " python utils.py R"
-         input file       "/scratch/local/7972752/Gau-1467024.EIn"
-         output file      "/scratch/local/7972752/Gau-1467024.EOu"
-         message file     "/scratch/local/7972752/Gau-1467024.EMs"
-         fchk file        "/scratch/local/7972752/Gau-1467024.EFC"
-         mat. el file     "/scratch/local/7972752/Gau-1467024.EUF"
-#INFO: **** input file is /projects/basi7344/software/alpine/research/external_gau/final_script/utils.py ****
-from pyscf import gto, scf
+         input file       "/scratch/local/15123732/Gau-142986.EIn"
+         output file      "/scratch/local/15123732/Gau-142986.EOu"
+         message file     "/scratch/local/15123732/Gau-142986.EMs"
+         fchk file        "/scratch/local/15123732/Gau-142986.EFC"
+         mat. el file     "/scratch/local/15123732/Gau-142986.EUF"
+#INFO: **** input file is /projects/basi7344/software/alpine/research/external_gau/final_script/new_test/again_try/utils.py ****
+from pyscf import gto, scf,lib
+from pyscf.hessian import thermo 
 import sys
 import os
 import numpy as np
@@ -196,6 +249,7 @@ def read_gauss_input(ifile):
     tokens = gau_input[0].split()
 
     natoms = int(tokens[0])
+    deriv = int(tokens[1])
     chrg = int(tokens[2])
     spin = int(tokens[3]) -1 
     coords = np.empty((natoms, 4))
@@ -204,7 +258,7 @@ def read_gauss_input(ifile):
         line = line.split()
         line_re = line[:-1]
         coords[i] = line_re
-    return natoms, chrg, spin, coords
+    return natoms, chrg, spin, coords, deriv
 
 def convert_to_xyz(data):
     coord_empty = ''
@@ -232,8 +286,28 @@ def pyscf_inp():
     grad = g.kernel()
     return grad, scf_ener, nuc_ener
 
+def pyscf_inp_hess(natoms):
+    mol=gto.Mole()
+    mol.spin = s
+    mol.charge = c
+    mol.basis = basis
+    mol.atom = cr
+    mol.unit = 'bohr'
+    mol.verbose = 4
+    mol.build()
+    mf = scf.RHF(mol)
+    scf_ener = mf.scf()
+    nuc_ener = mf.energy_nuc()
+    g = mf.nuc_grad_method()
+    grad = g.kernel()
+    hess = mf.Hessian().kernel()
+    hess_2d = hess.transpose(0,2,1,3).reshape(natoms*3,natoms*3)
+    lower_hess = hess_2d[np.tril_indices(hess_2d.shape[0])]
+    hess_f = lower_hess.reshape(int(lower_hess.shape[0]/3),3)
+    return grad, scf_ener, nuc_ener, hess_f
 
-def read_gauss_out(ofile, energy, natoms, gradient):
+
+def read_gauss_out(ofile, energy, natoms, gradient, hessian=None):
 
     headformat = ff.FortranRecordWriter("4D20.12")
     bodyformat = ff.FortranRecordWriter("3D20.12")
@@ -246,11 +320,10 @@ def read_gauss_out(ofile, energy, natoms, gradient):
     for i in range(natoms):
         output = bodyformat.write(gradient[i])
         f.write(output + "\n")
-
-    # polarizability and dipole derivatives are set to zero
+    
+        # polarizability and dipole derivatives are set to zero
     polarizability = np.zeros((2, 3))
     dipole_derivative = np.zeros((3 * natoms, 3))
-
     for i in range(2):
         output = bodyformat.write(polarizability[i])
         f.write(output + "\n")
@@ -259,25 +332,39 @@ def read_gauss_out(ofile, energy, natoms, gradient):
         output = bodyformat.write(dipole_derivative[i])
         f.write(output + "\n")
 
+
+    if hessian is not None:
+        for i in hessian:
+            output = bodyformat.write(i)
+            f.write(output + "\n")
+            print(output)
+
+
     f.close()
 
 
 if __name__=="__main__":
-    n , c, s, coord = read_gauss_input(ifile)
+    n , c, s, coord, deriv = read_gauss_input(ifile)
     cr = convert_to_xyz(coord)
-    gradient, energy_scf, energy_nuc = pyscf_inp()
-    read_gauss_out(ofile, energy_scf, n, gradient)
+    if deriv ==1:
+        gradient, energy_scf, energy_nuc = pyscf_inp()
+        read_gauss_out(ofile, energy_scf, n, gradient)
+    elif deriv ==2:
+        gradient, energy_scf, energy_nuc, hessian = pyscf_inp_hess(n)
+        read_gauss_out(ofile, energy_scf, n, gradient, hessian=hessian)
+    
+
 #INFO: ******************** input file end ********************
 
 
 System: uname_result(system='Linux', node='c3cpu-a2-u32-1.rc.int.colorado.edu', release='4.18.0-305.34.2.el8_4.x86_64', version='#1 SMP Mon Jan 17 09:42:23 EST 2022', machine='x86_64')  Threads 1
 Python 3.9.13 (main, Aug 25 2022, 23:26:10) 
 [GCC 11.2.0]
-numpy 1.21.5  scipy 1.9.1
-Date: Tue Sep 10 13:07:59 2024
-PySCF version 2.5.0
-PySCF path  /projects/basi7344/software/alpine/pyscf
-GIT HEAD (branch master) 6d3b24bb64e2a5edb7990b6e3304068981a33f54
+numpy 1.24.4  scipy 1.9.1  h5py 3.7.0
+Date: Mon Jun 23 02:10:24 2025
+PySCF version 2.9.0
+PySCF path  /projects/basi7344/software/alpine/new_pyscf/pyscf
+GIT HEAD (branch master) 8b41d9d71c45dae5cbfa6234a664275c528b9d36
 
 [ENV] PYSCF_TMPDIR /scratch/alpine/basi7344/TEMP
 [CONFIG] conf_file None
@@ -301,546 +388,6 @@ number of NR pGTOs = 54
 number of NR cGTOs = 34
 basis = ccpvdz
 ecp = {}
-CPU time:         0.50
-
-
-******** <class 'pyscf.scf.hf.RHF'> ********
-method = RHF
-initial guess = minao
-damping factor = 0
-level_shift factor = 0
-DIIS = <class 'pyscf.scf.diis.CDIIS'>
-diis_start_cycle = 1
-diis_space = 8
-diis_damp = 0
-SCF conv_tol = 1e-09
-SCF conv_tol_grad = None
-SCF max_cycles = 50
-direct_scf = True
-direct_scf_tol = 1e-13
-chkfile to save SCF result = /scratch/alpine/basi7344/TEMP/tmp50vimtqt
-max_memory 4000 MB (current use 120 MB)
-Set gradient conv threshold to 3.16228e-05
-Initial guess from minao.
-init E= -40.0906472907227
-  HOMO = -0.482579878410577  LUMO = 0.135712962424971
-cycle= 1 E= -40.1899150741844  delta_E= -0.0993  |g|= 0.149  |ddm|= 1.59
-  HOMO = -0.550631458930077  LUMO = 0.191158909554956
-cycle= 2 E= -40.1969947134961  delta_E= -0.00708  |g|= 0.0345  |ddm|= 0.114
-  HOMO = -0.547031503788908  LUMO = 0.19545576802723
-cycle= 3 E= -40.1974826146015  delta_E= -0.000488  |g|= 0.00308  |ddm|= 0.0337
-  HOMO = -0.547739745640908  LUMO = 0.195404252548962
-cycle= 4 E= -40.1974876833312  delta_E= -5.07e-06  |g|= 0.000418  |ddm|= 0.00555
-  HOMO = -0.547576367490585  LUMO = 0.195442336417583
-cycle= 5 E= -40.1974877636348  delta_E= -8.03e-08  |g|= 0.000153  |ddm|= 0.000849
-  HOMO = -0.547630911997348  LUMO = 0.19542045959236
-cycle= 6 E= -40.1974877724357  delta_E= -8.8e-09  |g|= 1.33e-05  |ddm|= 0.000326
-  HOMO = -0.547630927020012  LUMO = 0.195418459331
-cycle= 7 E= -40.197487772528  delta_E= -9.23e-11  |g|= 7.46e-07  |ddm|= 3.12e-05
-  HOMO = -0.547630838827843  LUMO = 0.195418524351927
-Extra cycle  E= -40.1974877725279  delta_E= 5.68e-14  |g|= 1.74e-07  |ddm|= 1.49e-06
-converged SCF energy = -40.1974877725279
-
-
-******** <class 'pyscf.grad.rhf.Gradients'> for <class 'pyscf.scf.hf.RHF'> ********
-unit = Eh/Bohr
-max_memory 4000 MB (current use 133 MB)
---------------- RHF gradients ---------------
-         x                y                z
-0 C     0.0000000000     0.0000000000     0.0000000000
-1 H    -0.0091685895    -0.0091685895    -0.0091685895
-2 H     0.0091685895     0.0091685895    -0.0091685895
-3 H     0.0091685895    -0.0091685895     0.0091685895
-4 H    -0.0091685895     0.0091685895     0.0091685895
-----------------------------------------------
- Recovered energy= -40.1974877725     dipole=      0.000000000000      0.000000000000      0.000000000000
- NRF= 0 NRA=   0 NVA=   5 HaveQM=F NVQ=       0
- Convergence limit is  0.750E-04 MaxStp= 10000 StMxLn= 3.00D-04 StpMin= 1.00D-06.
- Convergence criteria             0.00011250 0.00007500 0.00045000 0.00030000
-  Step  NS  ND Rises OKQ   Scale  Max. Force  RMS Force Max. Disp.  RMS Disp.     Energy   Flag
-     1   0   0   F    T  1.00D+00 0.00916859 0.00820064 0.00916859 0.00820064  -40.1974878 ----
-#INFO: **** input file is /projects/basi7344/software/alpine/research/external_gau/final_script/utils.py ****
-from pyscf import gto, scf
-import sys
-import os
-import numpy as np
-import fortranformat as ff
-
-basis = 'ccpvdz'
-ifile = sys.argv[2]
-ofile = sys.argv[3]
-
-def read_gauss_input(ifile):
-    with open(ifile, "r") as ifile:
-        gau_input = ifile.readlines()
-
-    tokens = gau_input[0].split()
-
-    natoms = int(tokens[0])
-    chrg = int(tokens[2])
-    spin = int(tokens[3]) -1 
-    coords = np.empty((natoms, 4))
-    atomtypes=[]
-    for i, line in enumerate(gau_input[1 : 1 + natoms]):
-        line = line.split()
-        line_re = line[:-1]
-        coords[i] = line_re
-    return natoms, chrg, spin, coords
-
-def convert_to_xyz(data):
-    coord_empty = ''
-    coord_final =''
-    for i, value in enumerate(data):
-        coord_empty = ' '.join(f'{x:.8f}' if not float(x).is_integer() else f'{int(x)}' for x in value) 
-        coord_final += coord_empty
-        if i < len(data)-1:
-            coord_final += ';'
-    return coord_final
-
-def pyscf_inp():
-    mol=gto.Mole()
-    mol.spin = s
-    mol.charge = c
-    mol.basis = basis
-    mol.atom = cr
-    mol.unit = 'bohr'
-    mol.verbose = 4
-    mol.build()
-    mf = scf.RHF(mol)
-    scf_ener = mf.scf()
-    nuc_ener = mf.energy_nuc()
-    g = mf.nuc_grad_method()
-    grad = g.kernel()
-    return grad, scf_ener, nuc_ener
-
-
-def read_gauss_out(ofile, energy, natoms, gradient):
-
-    headformat = ff.FortranRecordWriter("4D20.12")
-    bodyformat = ff.FortranRecordWriter("3D20.12")
-
-    f = open(ofile, "w")
-    head = [energy, 0 , 0, 0]
-    headstring = headformat.write(head)
-    f.write(headstring + "\n")
-
-    for i in range(natoms):
-        output = bodyformat.write(gradient[i])
-        f.write(output + "\n")
-
-    # polarizability and dipole derivatives are set to zero
-    polarizability = np.zeros((2, 3))
-    dipole_derivative = np.zeros((3 * natoms, 3))
-
-    for i in range(2):
-        output = bodyformat.write(polarizability[i])
-        f.write(output + "\n")
-
-    for i in range(3 * natoms):
-        output = bodyformat.write(dipole_derivative[i])
-        f.write(output + "\n")
-
-    f.close()
-
-
-if __name__=="__main__":
-    n , c, s, coord = read_gauss_input(ifile)
-    cr = convert_to_xyz(coord)
-    gradient, energy_scf, energy_nuc = pyscf_inp()
-    read_gauss_out(ofile, energy_scf, n, gradient)
-#INFO: ******************** input file end ********************
-
-
-System: uname_result(system='Linux', node='c3cpu-a2-u32-1.rc.int.colorado.edu', release='4.18.0-305.34.2.el8_4.x86_64', version='#1 SMP Mon Jan 17 09:42:23 EST 2022', machine='x86_64')  Threads 1
-Python 3.9.13 (main, Aug 25 2022, 23:26:10) 
-[GCC 11.2.0]
-numpy 1.21.5  scipy 1.9.1
-Date: Tue Sep 10 13:08:05 2024
-PySCF version 2.5.0
-PySCF path  /projects/basi7344/software/alpine/pyscf
-GIT HEAD (branch master) 6d3b24bb64e2a5edb7990b6e3304068981a33f54
-
-[ENV] PYSCF_TMPDIR /scratch/alpine/basi7344/TEMP
-[CONFIG] conf_file None
-[INPUT] verbose = 4
-[INPUT] num. atoms = 5
-[INPUT] num. electrons = 10
-[INPUT] charge = 0
-[INPUT] spin (= nelec alpha-beta = 2S) = 0
-[INPUT] symmetry False subgroup None
-[INPUT] Mole.unit = bohr
-[INPUT] Symbol           X                Y                Z      unit          X                Y                Z       unit  Magmom
-[INPUT]  1 C      0.000000000000   0.000000000000   0.000000000000 AA    0.000000000000   0.000000000000   0.000000000000 Bohr   0.0
-[INPUT]  2 H      0.622616571103   0.622616571103   0.622616571103 AA    1.176574800000   1.176574800000   1.176574800000 Bohr   0.0
-[INPUT]  3 H     -0.622616571103  -0.622616571103   0.622616571103 AA   -1.176574800000  -1.176574800000   1.176574800000 Bohr   0.0
-[INPUT]  4 H     -0.622616571103   0.622616571103  -0.622616571103 AA   -1.176574800000   1.176574800000  -1.176574800000 Bohr   0.0
-[INPUT]  5 H      0.622616571103  -0.622616571103  -0.622616571103 AA    1.176574800000  -1.176574800000  -1.176574800000 Bohr   0.0
-
-nuclear repulsion = 13.5798648790631
-number of shells = 17
-number of NR pGTOs = 54
-number of NR cGTOs = 34
-basis = ccpvdz
-ecp = {}
-CPU time:         0.41
-
-
-******** <class 'pyscf.scf.hf.RHF'> ********
-method = RHF
-initial guess = minao
-damping factor = 0
-level_shift factor = 0
-DIIS = <class 'pyscf.scf.diis.CDIIS'>
-diis_start_cycle = 1
-diis_space = 8
-diis_damp = 0
-SCF conv_tol = 1e-09
-SCF conv_tol_grad = None
-SCF max_cycles = 50
-direct_scf = True
-direct_scf_tol = 1e-13
-chkfile to save SCF result = /scratch/alpine/basi7344/TEMP/tmpvy5s_6oz
-max_memory 4000 MB (current use 118 MB)
-Set gradient conv threshold to 3.16228e-05
-Initial guess from minao.
-init E= -40.0649483022944
-  HOMO = -0.478314032772551  LUMO = 0.134397383240172
-cycle= 1 E= -40.1906934912121  delta_E= -0.126  |g|= 0.148  |ddm|= 1.58
-  HOMO = -0.549312249099014  LUMO = 0.189830790584286
-cycle= 2 E= -40.1977896460798  delta_E= -0.0071  |g|= 0.0347  |ddm|= 0.114
-  HOMO = -0.544217067543591  LUMO = 0.194665794952999
-cycle= 3 E= -40.1982784784062  delta_E= -0.000489  |g|= 0.00372  |ddm|= 0.0337
-  HOMO = -0.545836575507309  LUMO = 0.194335583869577
-cycle= 4 E= -40.1982836942432  delta_E= -5.22e-06  |g|= 0.00109  |ddm|= 0.0049
-  HOMO = -0.545457648218763  LUMO = 0.194458223182742
-cycle= 5 E= -40.1982841735001  delta_E= -4.79e-07  |g|= 0.000145  |ddm|= 0.00158
-  HOMO = -0.54549043623767  LUMO = 0.194440817872698
-cycle= 6 E= -40.1982841850593  delta_E= -1.16e-08  |g|= 1.5e-05  |ddm|= 0.00044
-  HOMO = -0.545491939481481  LUMO = 0.194438335959111
-cycle= 7 E= -40.1982841851662  delta_E= -1.07e-10  |g|= 7.76e-07  |ddm|= 3.3e-05
-  HOMO = -0.545491823042895  LUMO = 0.194438412038715
-Extra cycle  E= -40.1982841851666  delta_E= -4.12e-13  |g|= 1.84e-07  |ddm|= 1.55e-06
-converged SCF energy = -40.1982841851666
-
-
-******** <class 'pyscf.grad.rhf.Gradients'> for <class 'pyscf.scf.hf.RHF'> ********
-unit = Eh/Bohr
-max_memory 4000 MB (current use 131 MB)
---------------- RHF gradients ---------------
-         x                y                z
-0 C     0.0000000000     0.0000000000     0.0000000000
-1 H    -0.0053374692    -0.0053374692    -0.0053374692
-2 H     0.0053374692     0.0053374692    -0.0053374692
-3 H     0.0053374692    -0.0053374692     0.0053374692
-4 H    -0.0053374692     0.0053374692     0.0053374692
-----------------------------------------------
-     2   0   0   F    F  1.47D+00 0.00916859 0.00820064 0.01351839 0.01209121  -40.1982842 ----
-#INFO: **** input file is /projects/basi7344/software/alpine/research/external_gau/final_script/utils.py ****
-from pyscf import gto, scf
-import sys
-import os
-import numpy as np
-import fortranformat as ff
-
-basis = 'ccpvdz'
-ifile = sys.argv[2]
-ofile = sys.argv[3]
-
-def read_gauss_input(ifile):
-    with open(ifile, "r") as ifile:
-        gau_input = ifile.readlines()
-
-    tokens = gau_input[0].split()
-
-    natoms = int(tokens[0])
-    chrg = int(tokens[2])
-    spin = int(tokens[3]) -1 
-    coords = np.empty((natoms, 4))
-    atomtypes=[]
-    for i, line in enumerate(gau_input[1 : 1 + natoms]):
-        line = line.split()
-        line_re = line[:-1]
-        coords[i] = line_re
-    return natoms, chrg, spin, coords
-
-def convert_to_xyz(data):
-    coord_empty = ''
-    coord_final =''
-    for i, value in enumerate(data):
-        coord_empty = ' '.join(f'{x:.8f}' if not float(x).is_integer() else f'{int(x)}' for x in value) 
-        coord_final += coord_empty
-        if i < len(data)-1:
-            coord_final += ';'
-    return coord_final
-
-def pyscf_inp():
-    mol=gto.Mole()
-    mol.spin = s
-    mol.charge = c
-    mol.basis = basis
-    mol.atom = cr
-    mol.unit = 'bohr'
-    mol.verbose = 4
-    mol.build()
-    mf = scf.RHF(mol)
-    scf_ener = mf.scf()
-    nuc_ener = mf.energy_nuc()
-    g = mf.nuc_grad_method()
-    grad = g.kernel()
-    return grad, scf_ener, nuc_ener
-
-
-def read_gauss_out(ofile, energy, natoms, gradient):
-
-    headformat = ff.FortranRecordWriter("4D20.12")
-    bodyformat = ff.FortranRecordWriter("3D20.12")
-
-    f = open(ofile, "w")
-    head = [energy, 0 , 0, 0]
-    headstring = headformat.write(head)
-    f.write(headstring + "\n")
-
-    for i in range(natoms):
-        output = bodyformat.write(gradient[i])
-        f.write(output + "\n")
-
-    # polarizability and dipole derivatives are set to zero
-    polarizability = np.zeros((2, 3))
-    dipole_derivative = np.zeros((3 * natoms, 3))
-
-    for i in range(2):
-        output = bodyformat.write(polarizability[i])
-        f.write(output + "\n")
-
-    for i in range(3 * natoms):
-        output = bodyformat.write(dipole_derivative[i])
-        f.write(output + "\n")
-
-    f.close()
-
-
-if __name__=="__main__":
-    n , c, s, coord = read_gauss_input(ifile)
-    cr = convert_to_xyz(coord)
-    gradient, energy_scf, energy_nuc = pyscf_inp()
-    read_gauss_out(ofile, energy_scf, n, gradient)
-#INFO: ******************** input file end ********************
-
-
-System: uname_result(system='Linux', node='c3cpu-a2-u32-1.rc.int.colorado.edu', release='4.18.0-305.34.2.el8_4.x86_64', version='#1 SMP Mon Jan 17 09:42:23 EST 2022', machine='x86_64')  Threads 1
-Python 3.9.13 (main, Aug 25 2022, 23:26:10) 
-[GCC 11.2.0]
-numpy 1.21.5  scipy 1.9.1
-Date: Tue Sep 10 13:08:06 2024
-PySCF version 2.5.0
-PySCF path  /projects/basi7344/software/alpine/pyscf
-GIT HEAD (branch master) 6d3b24bb64e2a5edb7990b6e3304068981a33f54
-
-[ENV] PYSCF_TMPDIR /scratch/alpine/basi7344/TEMP
-[CONFIG] conf_file None
-[INPUT] verbose = 4
-[INPUT] num. atoms = 5
-[INPUT] num. electrons = 10
-[INPUT] charge = 0
-[INPUT] spin (= nelec alpha-beta = 2S) = 0
-[INPUT] symmetry False subgroup None
-[INPUT] Mole.unit = bohr
-[INPUT] Symbol           X                Y                Z      unit          X                Y                Z       unit  Magmom
-[INPUT]  1 C      0.000000000000   0.000000000000   0.000000000000 AA    0.000000000000   0.000000000000   0.000000000000 Bohr   0.0
-[INPUT]  2 H      0.629770195019   0.629770195019   0.629770195019 AA    1.190093190000   1.190093190000   1.190093190000 Bohr   0.0
-[INPUT]  3 H     -0.629770195019  -0.629770195019   0.629770195019 AA   -1.190093190000  -1.190093190000   1.190093190000 Bohr   0.0
-[INPUT]  4 H     -0.629770195019   0.629770195019  -0.629770195019 AA   -1.190093190000   1.190093190000  -1.190093190000 Bohr   0.0
-[INPUT]  5 H      0.629770195019  -0.629770195019  -0.629770195019 AA    1.190093190000  -1.190093190000  -1.190093190000 Bohr   0.0
-
-nuclear repulsion = 13.4256098080106
-number of shells = 17
-number of NR pGTOs = 54
-number of NR cGTOs = 34
-basis = ccpvdz
-ecp = {}
-CPU time:         0.41
-
-
-******** <class 'pyscf.scf.hf.RHF'> ********
-method = RHF
-initial guess = minao
-damping factor = 0
-level_shift factor = 0
-DIIS = <class 'pyscf.scf.diis.CDIIS'>
-diis_start_cycle = 1
-diis_space = 8
-diis_damp = 0
-SCF conv_tol = 1e-09
-SCF conv_tol_grad = None
-SCF max_cycles = 50
-direct_scf = True
-direct_scf_tol = 1e-13
-chkfile to save SCF result = /scratch/alpine/basi7344/TEMP/tmpk3zqalln
-max_memory 4000 MB (current use 118 MB)
-Set gradient conv threshold to 3.16228e-05
-Initial guess from minao.
-init E= -40.0274801757872
-  HOMO = -0.472137060822039  LUMO = 0.132355238396621
-cycle= 1 E= -40.1910698726259  delta_E= -0.164  |g|= 0.147  |ddm|= 1.57
-  HOMO = -0.547384233740435  LUMO = 0.187785872373109
-cycle= 2 E= -40.1982109765108  delta_E= -0.00714  |g|= 0.0352  |ddm|= 0.115
-  HOMO = -0.540113861858583  LUMO = 0.193419852303263
-cycle= 3 E= -40.1987027849836  delta_E= -0.000492  |g|= 0.00546  |ddm|= 0.0339
-  HOMO = -0.542507395303825  LUMO = 0.192851934130496
-cycle= 4 E= -40.1987111962565  delta_E= -8.41e-06  |g|= 0.00117  |ddm|= 0.00475
-  HOMO = -0.542337983222052  LUMO = 0.192942845914057
-cycle= 5 E= -40.19871196652  delta_E= -7.7e-07  |g|= 0.000136  |ddm|= 0.00227
-  HOMO = -0.542363370240485  LUMO = 0.192928069505098
-cycle= 6 E= -40.1987119774812  delta_E= -1.1e-08  |g|= 1.61e-05  |ddm|= 0.00043
-  HOMO = -0.54236527697746  LUMO = 0.192925372794765
-cycle= 7 E= -40.1987119776027  delta_E= -1.22e-10  |g|= 8.15e-07  |ddm|= 3.54e-05
-  HOMO = -0.542365142822409  LUMO = 0.192925458344427
-Extra cycle  E= -40.1987119776032  delta_E= -4.41e-13  |g|= 1.96e-07  |ddm|= 1.63e-06
-converged SCF energy = -40.1987119776032
-
-
-******** <class 'pyscf.grad.rhf.Gradients'> for <class 'pyscf.scf.hf.RHF'> ********
-unit = Eh/Bohr
-max_memory 4000 MB (current use 131 MB)
---------------- RHF gradients ---------------
-         x                y                z
-0 C    -0.0000000000    -0.0000000000     0.0000000000
-1 H     0.0000036157     0.0000036157     0.0000036157
-2 H    -0.0000036157    -0.0000036157     0.0000036157
-3 H    -0.0000036157     0.0000036157    -0.0000036157
-4 H     0.0000036157    -0.0000036157    -0.0000036157
-----------------------------------------------
- MMCGO1:  length 2.44D-17 force  9.84D-07 so reinitializing CG.
-     3   0   0   F    T  2.22D+01 0.00000362 0.00000323 0.00008029 0.00007181  -40.1987120 ====
- Running external command " python utils.py R"
-         input file       "/scratch/local/7972752/Gau-1467024.EIn"
-         output file      "/scratch/local/7972752/Gau-1467024.EOu"
-         message file     "/scratch/local/7972752/Gau-1467024.EMs"
-         fchk file        "/scratch/local/7972752/Gau-1467024.EFC"
-         mat. el file     "/scratch/local/7972752/Gau-1467024.EUF"
-#INFO: **** input file is /projects/basi7344/software/alpine/research/external_gau/final_script/utils.py ****
-from pyscf import gto, scf
-import sys
-import os
-import numpy as np
-import fortranformat as ff
-
-basis = 'ccpvdz'
-ifile = sys.argv[2]
-ofile = sys.argv[3]
-
-def read_gauss_input(ifile):
-    with open(ifile, "r") as ifile:
-        gau_input = ifile.readlines()
-
-    tokens = gau_input[0].split()
-
-    natoms = int(tokens[0])
-    chrg = int(tokens[2])
-    spin = int(tokens[3]) -1 
-    coords = np.empty((natoms, 4))
-    atomtypes=[]
-    for i, line in enumerate(gau_input[1 : 1 + natoms]):
-        line = line.split()
-        line_re = line[:-1]
-        coords[i] = line_re
-    return natoms, chrg, spin, coords
-
-def convert_to_xyz(data):
-    coord_empty = ''
-    coord_final =''
-    for i, value in enumerate(data):
-        coord_empty = ' '.join(f'{x:.8f}' if not float(x).is_integer() else f'{int(x)}' for x in value) 
-        coord_final += coord_empty
-        if i < len(data)-1:
-            coord_final += ';'
-    return coord_final
-
-def pyscf_inp():
-    mol=gto.Mole()
-    mol.spin = s
-    mol.charge = c
-    mol.basis = basis
-    mol.atom = cr
-    mol.unit = 'bohr'
-    mol.verbose = 4
-    mol.build()
-    mf = scf.RHF(mol)
-    scf_ener = mf.scf()
-    nuc_ener = mf.energy_nuc()
-    g = mf.nuc_grad_method()
-    grad = g.kernel()
-    return grad, scf_ener, nuc_ener
-
-
-def read_gauss_out(ofile, energy, natoms, gradient):
-
-    headformat = ff.FortranRecordWriter("4D20.12")
-    bodyformat = ff.FortranRecordWriter("3D20.12")
-
-    f = open(ofile, "w")
-    head = [energy, 0 , 0, 0]
-    headstring = headformat.write(head)
-    f.write(headstring + "\n")
-
-    for i in range(natoms):
-        output = bodyformat.write(gradient[i])
-        f.write(output + "\n")
-
-    # polarizability and dipole derivatives are set to zero
-    polarizability = np.zeros((2, 3))
-    dipole_derivative = np.zeros((3 * natoms, 3))
-
-    for i in range(2):
-        output = bodyformat.write(polarizability[i])
-        f.write(output + "\n")
-
-    for i in range(3 * natoms):
-        output = bodyformat.write(dipole_derivative[i])
-        f.write(output + "\n")
-
-    f.close()
-
-
-if __name__=="__main__":
-    n , c, s, coord = read_gauss_input(ifile)
-    cr = convert_to_xyz(coord)
-    gradient, energy_scf, energy_nuc = pyscf_inp()
-    read_gauss_out(ofile, energy_scf, n, gradient)
-#INFO: ******************** input file end ********************
-
-
-System: uname_result(system='Linux', node='c3cpu-a2-u32-1.rc.int.colorado.edu', release='4.18.0-305.34.2.el8_4.x86_64', version='#1 SMP Mon Jan 17 09:42:23 EST 2022', machine='x86_64')  Threads 1
-Python 3.9.13 (main, Aug 25 2022, 23:26:10) 
-[GCC 11.2.0]
-numpy 1.21.5  scipy 1.9.1
-Date: Tue Sep 10 13:08:08 2024
-PySCF version 2.5.0
-PySCF path  /projects/basi7344/software/alpine/pyscf
-GIT HEAD (branch master) 6d3b24bb64e2a5edb7990b6e3304068981a33f54
-
-[ENV] PYSCF_TMPDIR /scratch/alpine/basi7344/TEMP
-[CONFIG] conf_file None
-[INPUT] verbose = 4
-[INPUT] num. atoms = 5
-[INPUT] num. electrons = 10
-[INPUT] charge = 0
-[INPUT] spin (= nelec alpha-beta = 2S) = 0
-[INPUT] symmetry False subgroup None
-[INPUT] Mole.unit = bohr
-[INPUT] Symbol           X                Y                Z      unit          X                Y                Z       unit  Magmom
-[INPUT]  1 C      0.000000000000   0.000000000000   0.000000000000 AA    0.000000000000   0.000000000000   0.000000000000 Bohr   0.0
-[INPUT]  2 H      0.629770195019   0.629770195019   0.629770195019 AA    1.190093190000   1.190093190000   1.190093190000 Bohr   0.0
-[INPUT]  3 H     -0.629770195019  -0.629770195019   0.629770195019 AA   -1.190093190000  -1.190093190000   1.190093190000 Bohr   0.0
-[INPUT]  4 H     -0.629770195019   0.629770195019  -0.629770195019 AA   -1.190093190000   1.190093190000  -1.190093190000 Bohr   0.0
-[INPUT]  5 H      0.629770195019  -0.629770195019  -0.629770195019 AA    1.190093190000  -1.190093190000  -1.190093190000 Bohr   0.0
-
-nuclear repulsion = 13.4256098080106
-number of shells = 17
-number of NR pGTOs = 54
-number of NR cGTOs = 34
-basis = ccpvdz
-ecp = {}
 CPU time:         0.40
 
 
@@ -858,114 +405,264 @@ SCF conv_tol_grad = None
 SCF max_cycles = 50
 direct_scf = True
 direct_scf_tol = 1e-13
-chkfile to save SCF result = /scratch/alpine/basi7344/TEMP/tmpcy57jjw2
-max_memory 4000 MB (current use 118 MB)
+chkfile to save SCF result = /scratch/alpine/basi7344/TEMP/tmprcggmrhu
+max_memory 4000 MB (current use 89 MB)
 Set gradient conv threshold to 3.16228e-05
 Initial guess from minao.
-init E= -40.0274801757872
-  HOMO = -0.472137060822039  LUMO = 0.132355238396621
-cycle= 1 E= -40.1910698726259  delta_E= -0.164  |g|= 0.147  |ddm|= 1.57
-  HOMO = -0.547384233740435  LUMO = 0.187785872373109
-cycle= 2 E= -40.1982109765108  delta_E= -0.00714  |g|= 0.0352  |ddm|= 0.115
-  HOMO = -0.540113861858583  LUMO = 0.193419852303263
-cycle= 3 E= -40.1987027849836  delta_E= -0.000492  |g|= 0.00546  |ddm|= 0.0339
-  HOMO = -0.542507395303825  LUMO = 0.192851934130496
-cycle= 4 E= -40.1987111962565  delta_E= -8.41e-06  |g|= 0.00117  |ddm|= 0.00475
-  HOMO = -0.542337983222052  LUMO = 0.192942845914057
-cycle= 5 E= -40.19871196652  delta_E= -7.7e-07  |g|= 0.000136  |ddm|= 0.00227
-  HOMO = -0.542363370240485  LUMO = 0.192928069505098
-cycle= 6 E= -40.1987119774812  delta_E= -1.1e-08  |g|= 1.61e-05  |ddm|= 0.00043
-  HOMO = -0.54236527697746  LUMO = 0.192925372794765
-cycle= 7 E= -40.1987119776027  delta_E= -1.22e-10  |g|= 8.15e-07  |ddm|= 3.54e-05
-  HOMO = -0.542365142822409  LUMO = 0.192925458344427
-Extra cycle  E= -40.1987119776032  delta_E= -4.41e-13  |g|= 1.96e-07  |ddm|= 1.63e-06
-converged SCF energy = -40.1987119776032
+init E= -40.0906472907227
+  HOMO = -0.482579878410575  LUMO = 0.13571296242497
+cycle= 1 E= -40.1899150741843  delta_E= -0.0993  |g|= 0.149  |ddm|= 1.59
+  HOMO = -0.550631458930081  LUMO = 0.191158909554958
+cycle= 2 E= -40.1969947134962  delta_E= -0.00708  |g|= 0.0345  |ddm|= 0.114
+  HOMO = -0.547031503788907  LUMO = 0.19545576802724
+cycle= 3 E= -40.1974826146015  delta_E= -0.000488  |g|= 0.00308  |ddm|= 0.0337
+  HOMO = -0.547739745640909  LUMO = 0.195404252549037
+cycle= 4 E= -40.1974876833312  delta_E= -5.07e-06  |g|= 0.000418  |ddm|= 0.00555
+  HOMO = -0.547576367490587  LUMO = 0.195442336417675
+cycle= 5 E= -40.1974877636348  delta_E= -8.03e-08  |g|= 0.000153  |ddm|= 0.000849
+  HOMO = -0.547630911997349  LUMO = 0.195420459592273
+cycle= 6 E= -40.1974877724358  delta_E= -8.8e-09  |g|= 1.33e-05  |ddm|= 0.000326
+  HOMO = -0.547630927020009  LUMO = 0.195418459330937
+cycle= 7 E= -40.1974877725279  delta_E= -9.21e-11  |g|= 7.46e-07  |ddm|= 3.12e-05
+  HOMO = -0.547630838827842  LUMO = 0.195418524351941
+Extra cycle  E= -40.1974877725278  delta_E= 9.95e-14  |g|= 1.74e-07  |ddm|= 1.49e-06
+converged SCF energy = -40.1974877725278
 
 
 ******** <class 'pyscf.grad.rhf.Gradients'> for <class 'pyscf.scf.hf.RHF'> ********
 unit = Eh/Bohr
-max_memory 4000 MB (current use 131 MB)
+max_memory 4000 MB (current use 121 MB)
 --------------- RHF gradients ---------------
          x                y                z
-0 C    -0.0000000000    -0.0000000000     0.0000000000
-1 H     0.0000036157     0.0000036157     0.0000036157
-2 H    -0.0000036157    -0.0000036157     0.0000036157
-3 H    -0.0000036157     0.0000036157    -0.0000036157
-4 H     0.0000036157    -0.0000036157    -0.0000036157
+0 C    -0.0000000000     0.0000000000    -0.0000000000
+1 H    -0.0091685895    -0.0091685895    -0.0091685895
+2 H     0.0091685895     0.0091685895    -0.0091685895
+3 H     0.0091685895    -0.0091685895     0.0091685895
+4 H    -0.0091685895     0.0091685895     0.0091685895
 ----------------------------------------------
- Recovered energy= -40.1987119776     dipole=      0.000000000000      0.000000000000      0.000000000000
- Energy=    -40.1987120     NIter=   0.
+  0.654850617776D+00 -0.885211421844D-15  0.654850617739D+00
+ -0.522699095371D-15 -0.360227476943D-10  0.654850617740D+00
+ -0.163712654444D+00 -0.115439243569D+00 -0.115439243569D+00
+  0.170874349581D+00 -0.115439243560D+00 -0.163712654443D+00
+ -0.115439243559D+00  0.125550217831D+00  0.170874350420D+00
+ -0.115439243560D+00 -0.115439243559D+00 -0.163712654443D+00
+  0.125550217831D+00  0.125550217830D+00  0.170874350420D+00
+ -0.163712654444D+00 -0.115439243544D+00  0.115439243577D+00
+ -0.115982650718D-01 -0.101109741856D-01  0.135160668308D-01
+  0.170874348984D+00 -0.115439243560D+00 -0.163712654426D+00
+  0.115439243577D+00 -0.101109740807D-01 -0.115982650320D-01
+  0.135160669023D-01  0.125550216323D+00  0.170874348894D+00
+  0.115439243560D+00  0.115439243553D+00 -0.163712654450D+00
+ -0.135160673816D-01 -0.135160673687D-01  0.160348365001D-01
+ -0.125550217212D+00 -0.125550217204D+00  0.170874349814D+00
+ -0.163712654444D+00  0.115439243577D+00 -0.115439243544D+00
+ -0.115982650718D-01  0.135160668308D-01 -0.101109741856D-01
+  0.160348356860D-01 -0.135160682005D-01  0.135160681513D-01
+  0.170874348984D+00  0.115439243560D+00 -0.163712654450D+00
+  0.115439243553D+00 -0.135160673816D-01  0.160348365001D-01
+ -0.135160673687D-01  0.135160660034D-01 -0.115982659237D-01
+  0.101109750258D-01 -0.125550217212D+00  0.170874349814D+00
+ -0.115439243560D+00  0.115439243577D+00 -0.163712654426D+00
+ -0.101109740807D-01  0.135160669023D-01 -0.115982650320D-01
+ -0.135160668924D-01  0.101109741054D-01 -0.115982650751D-01
+  0.125550216323D+00 -0.125550216356D+00  0.170874348894D+00
+ -0.163712654444D+00  0.115439243536D+00  0.115439243536D+00
+  0.160348350060D-01 -0.135160688168D-01 -0.135160688168D-01
+ -0.115982644927D-01  0.135160674672D-01  0.101109736205D-01
+ -0.115982644927D-01  0.101109736205D-01  0.135160674672D-01
+  0.170874348423D+00  0.115439243560D+00 -0.163712654419D+00
+ -0.115439243535D+00  0.135160675718D-01 -0.115982644101D-01
+ -0.101109734922D-01 -0.135160688715D-01  0.160348349708D-01
+  0.135160688242D-01  0.101109735063D-01 -0.115982644716D-01
+ -0.135160675365D-01 -0.125550215767D+00  0.170874348330D+00
+  0.115439243560D+00 -0.115439243535D+00 -0.163712654419D+00
+  0.135160675718D-01 -0.101109734922D-01 -0.115982644101D-01
+  0.101109735063D-01 -0.135160675365D-01 -0.115982644716D-01
+ -0.135160688715D-01  0.135160688242D-01  0.160348349708D-01
+ -0.125550215767D+00  0.125550215740D+00  0.170874348330D+00
+ Recovered energy= -40.1974877725     dipole=      0.000000000000      0.000000000000      0.000000000000
+ Energy=    -40.1974878     NIter=   0.
  Dipole moment=       0.000000       0.000000       0.000000
+ Leave Link  402 at Mon Jun 23 02:10:25 2025, MaxMem=  2684354560 cpu:               0.0 elap:               2.6
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l601.exe)
+ Leave Link  601 at Mon Jun 23 02:10:25 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l716.exe)
+ Dipole        = 0.00000000D+00 0.00000000D+00 0.00000000D+00
  ***** Axes restored to original set *****
  -------------------------------------------------------------------
  Center     Atomic                   Forces (Hartrees/Bohr)
  Number     Number              X              Y              Z
  -------------------------------------------------------------------
-      1        6           0.000000000   -0.000000000   -0.000000000
-      2        1          -0.000002087    0.000005904    0.000000000
-      3        1          -0.000002088   -0.000002952   -0.000005113
-      4        1          -0.000002088   -0.000002952    0.000005113
-      5        1           0.000006263   -0.000000000   -0.000000000
+      1        6           0.000000000   -0.000000000    0.000000000
+      2        1           0.005293306   -0.014972308   -0.000000013
+      3        1           0.005293589    0.007486050    0.012966344
+      4        1           0.005293568    0.007486065   -0.012966344
+      5        1          -0.015880463    0.000000192    0.000000013
  -------------------------------------------------------------------
- Cartesian Forces:  Max     0.000006263 RMS     0.000003234
+ Cartesian Forces:  Max     0.015880463 RMS     0.008200636
+ Force constants in Cartesian coordinates: 
+                1             2             3             4             5 
+      1  0.654851D+00
+      2  0.000000D+00  0.654851D+00
+      3  0.000000D+00  0.000000D+00  0.654851D+00
+      4 -0.867505D-01  0.108834D+00  0.000000D+00  0.871713D-01
+      5  0.108834D+00 -0.356114D+00  0.000000D+00 -0.118366D+00  0.380128D+00
+      6  0.000000D+00  0.000000D+00 -0.482734D-01  0.000000D+00  0.000000D+00
+      7 -0.867546D-01 -0.544191D-01 -0.942575D-01  0.435333D-02  0.542707D-02
+      8 -0.544191D-01 -0.125231D+00 -0.133296D+00 -0.136876D-01 -0.137333D-01
+      9 -0.942575D-01 -0.133296D+00 -0.279152D+00  0.163548D-02  0.179241D-02
+     10 -0.867543D-01 -0.544190D-01  0.942572D-01  0.435331D-02  0.542708D-02
+     11 -0.544190D-01 -0.125232D+00  0.133297D+00 -0.136875D-01 -0.137333D-01
+     12  0.942572D-01  0.133297D+00 -0.279152D+00 -0.163550D-02 -0.179244D-02
+     13 -0.394591D+00  0.419713D-05  0.000000D+00 -0.912745D-02 -0.132173D-02
+     14  0.419716D-05 -0.482734D-01  0.000000D+00  0.369075D-01  0.345305D-02
+     15  0.000000D+00  0.000000D+00 -0.482734D-01  0.000000D+00  0.000000D+00
+                6             7             8             9            10 
+      6  0.453241D-01
+      7  0.126709D-01  0.871758D-01
+      8 -0.294217D-01  0.591855D-01  0.129023D+00
+      9  0.221826D-02  0.102513D+00  0.144972D+00  0.296425D+00
+     10 -0.126709D-01  0.435362D-02  0.826010D-02 -0.110360D-01  0.871755D-01
+     11  0.294217D-01  0.826006D-02  0.101939D-01 -0.156069D-01  0.591854D-01
+     12  0.221831D-02  0.110360D-01  0.156069D-01 -0.217092D-01 -0.102513D+00
+     13  0.000000D+00 -0.912812D-02  0.661049D-03  0.114482D-02 -0.912807D-02
+     14  0.000000D+00 -0.184535D-01 -0.251886D-03  0.213941D-02 -0.184536D-01
+     15 -0.148729D-02 -0.319627D-01  0.213980D-02  0.221831D-02  0.319627D-01
+               11            12            13            14            15 
+     11  0.129023D+00
+     12 -0.144972D+00  0.296425D+00
+     13  0.661047D-03 -0.114480D-02  0.421975D+00
+     14 -0.251881D-03 -0.213939D-02 -0.456473D-05  0.453241D-01
+     15 -0.213980D-02  0.221826D-02  0.000000D+00  0.000000D+00  0.453241D-01
+ FormGI is forming the generalized inverse of G from B-inverse, IUseBI=4.
+ Force constants in internal coordinates: 
+                1             2             3             4             5 
+      1  0.421975D+00
+      2  0.179635D-02  0.421975D+00
+      3  0.179635D-02  0.179635D-02  0.421975D+00
+      4  0.179635D-02  0.179635D-02  0.179635D-02  0.421975D+00
+      5  0.201681D-02  0.201681D-02 -0.126637D-02 -0.276726D-02  0.221591D-01
+      6  0.316083D-02 -0.815698D-03  0.351770D-02 -0.586283D-02 -0.973809D-02
+      7  0.617688D-02 -0.495741D-02 -0.548761D-02  0.426814D-02 -0.146501D-01
+      8 -0.815698D-03  0.316083D-02  0.351770D-02 -0.586283D-02 -0.973809D-02
+      9 -0.495741D-02  0.617688D-02 -0.548761D-02  0.426814D-02 -0.146501D-01
+     10 -0.558142D-02 -0.558142D-02  0.520619D-02  0.595664D-02  0.266173D-01
+     11 -0.390618D-02 -0.390618D-02 -0.275730D-02  0.105697D-01 -0.152126D-01
+     12  0.321685D-02  0.321685D-02 -0.827190D-02  0.183820D-02  0.919658D-02
+     13 -0.423585D-02  0.745271D-02 -0.413595D-02  0.919100D-03  0.459829D-02
+     14 -0.745271D-02  0.423585D-02  0.413595D-02 -0.919100D-03 -0.459829D-02
+                6             7             8             9            10 
+      6  0.418727D-01
+      7 -0.253913D-01  0.817998D-01
+      8 -0.215677D-02  0.275344D-01  0.418727D-01
+      9  0.275344D-01 -0.395032D-01 -0.253913D-01  0.817998D-01
+     10 -0.321210D-01 -0.297897D-01 -0.321210D-01 -0.297897D-01  0.972041D-01
+     11 -0.123943D-01  0.166302D-01 -0.123943D-01  0.166302D-01  0.674059D-02
+     12 -0.106143D-01  0.795867D-02 -0.106143D-01  0.795867D-02 -0.388537D-02
+     13 -0.160645D-01 -0.751722D-03  0.545018D-02  0.871039D-02 -0.194269D-02
+     14 -0.545018D-02 -0.871039D-02  0.160645D-01  0.751722D-03  0.194269D-02
+               11            12            13            14 
+     11  0.338113D-01
+     12  0.173631D-02  0.210108D-01
+     13  0.868154D-03  0.105054D-01  0.213248D-01
+     14 -0.868154D-03 -0.105054D-01  0.108194D-01  0.213248D-01
+ Leave Link  716 at Mon Jun 23 02:10:25 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l103.exe)
 
  GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
  Berny optimization.
+ Red2BG is reusing G-inverse.
+ Internal  Forces:  Max     0.015880463 RMS     0.008488464
  Search for a local minimum.
- Step number   1 out of a maximum of    2
+ Step number   1 out of a maximum of   24
  All quantities printed in internal units (Hartrees-Bohrs-Radians)
- Mixed Optimization -- En-DIIS/RFO-DIIS
- Second derivative matrix not updated -- unit matrix used.
+ RMS Force = .84885D-02 SwitMx=.10000D-02 MixMth= 1
+ Mixed Optimization -- RFO/linear search
+ Second derivative matrix not updated -- analytic derivatives used.
+ The second derivative matrix:
+                          R1        R2        R3        R4        A1
+           R1           0.42197
+           R2           0.00180   0.42197
+           R3           0.00180   0.00180   0.42197
+           R4           0.00180   0.00180   0.00180   0.42197
+           A1           0.00202   0.00202  -0.00127  -0.00277   0.02216
+           A2           0.00316  -0.00082   0.00352  -0.00586  -0.00974
+           A3           0.00618  -0.00496  -0.00549   0.00427  -0.01465
+           A4          -0.00082   0.00316   0.00352  -0.00586  -0.00974
+           A5          -0.00496   0.00618  -0.00549   0.00427  -0.01465
+           A6          -0.00558  -0.00558   0.00521   0.00596   0.02662
+           D1          -0.00391  -0.00391  -0.00276   0.01057  -0.01521
+           D2           0.00322   0.00322  -0.00827   0.00184   0.00920
+           D3          -0.00424   0.00745  -0.00414   0.00092   0.00460
+           D4          -0.00745   0.00424   0.00414  -0.00092  -0.00460
+                          A2        A3        A4        A5        A6
+           A2           0.04187
+           A3          -0.02539   0.08180
+           A4          -0.00216   0.02753   0.04187
+           A5           0.02753  -0.03950  -0.02539   0.08180
+           A6          -0.03212  -0.02979  -0.03212  -0.02979   0.09720
+           D1          -0.01239   0.01663  -0.01239   0.01663   0.00674
+           D2          -0.01061   0.00796  -0.01061   0.00796  -0.00389
+           D3          -0.01606  -0.00075   0.00545   0.00871  -0.00194
+           D4          -0.00545  -0.00871   0.01606   0.00075   0.00194
+                          D1        D2        D3        D4
+           D1           0.03381
+           D2           0.00174   0.02101
+           D3           0.00087   0.01051   0.02132
+           D4          -0.00087  -0.01051   0.01082   0.02132
  ITU=  0
- RFO step:  Lambda= 0.00000000D+00 EMin= 1.00000000D+00
- ClnCor:  largest displacement from symmetrization is 5.66D-15 for atom     4.
+     Eigenvalues ---    0.04319   0.04869   0.07414   0.14753   0.14798
+     Eigenvalues ---    0.42097   0.42098   0.42123   0.42736
+ RFO step:  Lambda=-2.34752139D-03 EMin= 4.31858032D-02
  Linear search not attempted -- first point.
- ClnCor:  largest displacement from symmetrization is 1.88D-15 for atom     4.
+ Iteration  1 RMS(Cart)=  0.01975388 RMS(Int)=  0.00000000
+ Iteration  2 RMS(Cart)=  0.00000000 RMS(Int)=  0.00000000
+ ITry= 1 IFail=0 DXMaxC= 3.70D-02 DCOld= 1.00D+10 DXMaxT= 3.00D-01 DXLimC= 3.00D+00 Rises=F
+ ClnCor:  largest displacement from symmetrization is 1.06D-09 for atom     5.
  Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
                                  (Linear)    (Quad)   (Total)
-    X1       -1.52845   0.00000   0.00000   0.00000   0.00000  -1.52845
-    Y1        0.55580  -0.00000   0.00000   0.00000  -0.00000   0.55580
-    Z1        0.00000  -0.00000   0.00000  -0.00000  -0.00000   0.00000
-    X2       -0.84138  -0.00000   0.00000  -0.00000  -0.00000  -0.84138
-    Y2       -1.38762   0.00001   0.00000   0.00001   0.00001  -1.38761
-    Z2       -0.00000   0.00000   0.00000   0.00000   0.00000  -0.00000
-    X3       -0.84134  -0.00000   0.00000  -0.00000  -0.00000  -0.84134
-    Y3        1.52750  -0.00000   0.00000  -0.00000  -0.00000   1.52750
-    Z3        1.68305  -0.00001   0.00000  -0.00001  -0.00001   1.68304
-    X4       -0.84134  -0.00000   0.00000  -0.00000  -0.00000  -0.84135
-    Y4        1.52750  -0.00000   0.00000  -0.00000  -0.00000   1.52750
-    Z4       -1.68305   0.00001   0.00000   0.00001   0.00001  -1.68304
-    X5       -3.58976   0.00001   0.00000   0.00001   0.00001  -3.58975
-    Y5        0.55583  -0.00000   0.00000  -0.00000  -0.00000   0.55583
-    Z5        0.00000  -0.00000   0.00000  -0.00000  -0.00000   0.00000
+    R1        2.02201   0.01588   0.00000   0.03696   0.03696   2.05896
+    R2        2.02201   0.01588   0.00000   0.03696   0.03696   2.05896
+    R3        2.02201   0.01588   0.00000   0.03696   0.03696   2.05896
+    R4        2.02201   0.01588   0.00000   0.03696   0.03696   2.05896
+    A1        1.91063   0.00000   0.00000  -0.00000   0.00000   1.91063
+    A2        1.91063  -0.00000   0.00000  -0.00000  -0.00000   1.91063
+    A3        1.91063   0.00000   0.00000   0.00000   0.00000   1.91063
+    A4        1.91063  -0.00000   0.00000  -0.00000   0.00000   1.91063
+    A5        1.91063   0.00000   0.00000   0.00000   0.00000   1.91063
+    A6        1.91063  -0.00000   0.00000   0.00000   0.00000   1.91063
+    D1       -2.09440  -0.00000   0.00000   0.00000   0.00000  -2.09440
+    D2        2.09440   0.00000   0.00000  -0.00000   0.00000   2.09440
+    D3       -2.09440   0.00000   0.00000  -0.00000   0.00000  -2.09440
+    D4        2.09440  -0.00000   0.00000  -0.00000   0.00000   2.09440
          Item               Value     Threshold  Converged?
- Maximum Force            0.000006     0.000450     YES
- RMS     Force            0.000003     0.000300     YES
- Maximum Displacement     0.000006     0.001800     YES
- RMS     Displacement     0.000003     0.001200     YES
- Predicted change in Energy=-7.844112D-11
- Optimization completed.
-    -- Stationary point found.
+ Maximum Force            0.015880     0.000450     NO 
+ RMS     Force            0.008488     0.000300     NO 
+ Maximum Displacement     0.036956     0.001800     NO 
+ RMS     Displacement     0.019754     0.001200     NO 
+ Predicted change in Energy=-1.180173D-03
  GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
 
+ Leave Link  103 at Mon Jun 23 02:10:25 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l202.exe)
                           Input orientation:                          
  ---------------------------------------------------------------------
  Center     Atomic      Atomic             Coordinates (Angstroms)
  Number     Number       Type             X           Y           Z
  ---------------------------------------------------------------------
-      1          6           0       -0.808824    0.294118    0.000000
-      2          1           0       -0.445238   -0.734297   -0.000001
-      3          1           0       -0.445219    0.808318    0.890630
-      4          1           0       -0.445220    0.808319   -0.890630
-      5          1           0       -1.899618    0.294131    0.000001
+      1          6           0       -0.808824    0.294118   -0.000000
+      2          1           0       -0.445651   -0.733130   -0.000001
+      3          1           0       -0.445631    0.807734    0.889619
+      4          1           0       -0.445633    0.807735   -0.889619
+      5          1           0       -1.898380    0.294131    0.000001
  ---------------------------------------------------------------------
                     Distance matrix (angstroms):
                     1          2          3          4          5
      1  C    0.000000
-     2  H    1.090794   0.000000
-     3  H    1.090794   1.781259   0.000000
-     4  H    1.090794   1.781259   1.781259   0.000000
-     5  H    1.090794   1.781259   1.781259   1.781259   0.000000
+     2  H    1.089556   0.000000
+     3  H    1.089556   1.779238   0.000000
+     4  H    1.089556   1.779238   1.779238   0.000000
+     5  H    1.089556   1.779238   1.779238   1.779238   0.000000
  Stoichiometry    CH4
  Framework group  TD[O(C),4C3(H)]
  Deg. of freedom     1
@@ -974,6 +671,7 @@ max_memory 4000 MB (current use 131 MB)
 
  Old FWG=T    [O(C1),4C3(H1)]
  New FWG=TD   [O(C1),4C3(H1)]
+ RotChk:  IX=0 Diff= 2.05D-15
  Largest Abelian subgroup         D2      NOp   4
  Largest concise Abelian subgroup D2      NOp   4
                          Standard orientation:                         
@@ -982,26 +680,1228 @@ max_memory 4000 MB (current use 131 MB)
  Number     Number       Type             X           Y           Z
  ---------------------------------------------------------------------
       1          6           0        0.000000    0.000000    0.000000
-      2          1           0        0.629770    0.629770    0.629770
-      3          1           0       -0.629770   -0.629770    0.629770
-      4          1           0       -0.629770    0.629770   -0.629770
-      5          1           0        0.629770   -0.629770   -0.629770
+      2          1           0        0.629056    0.629056    0.629056
+      3          1           0       -0.629056   -0.629056    0.629056
+      4          1           0       -0.629056    0.629056   -0.629056
+      5          1           0        0.629056   -0.629056   -0.629056
  ---------------------------------------------------------------------
- Rotational constants (GHZ):         158.0439468         158.0439468         158.0439468
+ Rotational constants (GHZ):         158.4032106         158.4032106         158.4032106
+ Leave Link  202 at Mon Jun 23 02:10:25 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l301.exe)
+ Standard basis: STO-3G (5D, 7F)
+ Ernie: Thresh=  0.10000D-02 Tol=  0.10000D-05 Strict=F.
+ There are     3 symmetry adapted cartesian basis functions of A   symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B1  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B2  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B3  symmetry.
+ There are     3 symmetry adapted basis functions of A   symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     2 symmetry adapted basis functions of B2  symmetry.
+ There are     2 symmetry adapted basis functions of B3  symmetry.
+     9 basis functions,    27 primitive gaussians,     9 cartesian basis functions
+     5 alpha electrons        5 beta electrons
+       nuclear repulsion energy        13.4408606711 Hartrees.
+ IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ NAtoms=    5 NActive=    5 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+ Leave Link  301 at Mon Jun 23 02:10:25 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l402.exe)
+ External calculation of energy, first and second derivatives.
+ Running external command " python utils.py R"
+         input file       "/scratch/local/15123732/Gau-142986.EIn"
+         output file      "/scratch/local/15123732/Gau-142986.EOu"
+         message file     "/scratch/local/15123732/Gau-142986.EMs"
+         fchk file        "/scratch/local/15123732/Gau-142986.EFC"
+         mat. el file     "/scratch/local/15123732/Gau-142986.EUF"
+#INFO: **** input file is /projects/basi7344/software/alpine/research/external_gau/final_script/new_test/again_try/utils.py ****
+from pyscf import gto, scf,lib
+from pyscf.hessian import thermo 
+import sys
+import os
+import numpy as np
+import fortranformat as ff
+
+basis = 'ccpvdz'
+ifile = sys.argv[2]
+ofile = sys.argv[3]
+
+def read_gauss_input(ifile):
+    with open(ifile, "r") as ifile:
+        gau_input = ifile.readlines()
+
+    tokens = gau_input[0].split()
+
+    natoms = int(tokens[0])
+    deriv = int(tokens[1])
+    chrg = int(tokens[2])
+    spin = int(tokens[3]) -1 
+    coords = np.empty((natoms, 4))
+    atomtypes=[]
+    for i, line in enumerate(gau_input[1 : 1 + natoms]):
+        line = line.split()
+        line_re = line[:-1]
+        coords[i] = line_re
+    return natoms, chrg, spin, coords, deriv
+
+def convert_to_xyz(data):
+    coord_empty = ''
+    coord_final =''
+    for i, value in enumerate(data):
+        coord_empty = ' '.join(f'{x:.8f}' if not float(x).is_integer() else f'{int(x)}' for x in value) 
+        coord_final += coord_empty
+        if i < len(data)-1:
+            coord_final += ';'
+    return coord_final
+
+def pyscf_inp():
+    mol=gto.Mole()
+    mol.spin = s
+    mol.charge = c
+    mol.basis = basis
+    mol.atom = cr
+    mol.unit = 'bohr'
+    mol.verbose = 4
+    mol.build()
+    mf = scf.RHF(mol)
+    scf_ener = mf.scf()
+    nuc_ener = mf.energy_nuc()
+    g = mf.nuc_grad_method()
+    grad = g.kernel()
+    return grad, scf_ener, nuc_ener
+
+def pyscf_inp_hess(natoms):
+    mol=gto.Mole()
+    mol.spin = s
+    mol.charge = c
+    mol.basis = basis
+    mol.atom = cr
+    mol.unit = 'bohr'
+    mol.verbose = 4
+    mol.build()
+    mf = scf.RHF(mol)
+    scf_ener = mf.scf()
+    nuc_ener = mf.energy_nuc()
+    g = mf.nuc_grad_method()
+    grad = g.kernel()
+    hess = mf.Hessian().kernel()
+    hess_2d = hess.transpose(0,2,1,3).reshape(natoms*3,natoms*3)
+    lower_hess = hess_2d[np.tril_indices(hess_2d.shape[0])]
+    hess_f = lower_hess.reshape(int(lower_hess.shape[0]/3),3)
+    return grad, scf_ener, nuc_ener, hess_f
+
+
+def read_gauss_out(ofile, energy, natoms, gradient, hessian=None):
+
+    headformat = ff.FortranRecordWriter("4D20.12")
+    bodyformat = ff.FortranRecordWriter("3D20.12")
+
+    f = open(ofile, "w")
+    head = [energy, 0 , 0, 0]
+    headstring = headformat.write(head)
+    f.write(headstring + "\n")
+
+    for i in range(natoms):
+        output = bodyformat.write(gradient[i])
+        f.write(output + "\n")
+    
+        # polarizability and dipole derivatives are set to zero
+    polarizability = np.zeros((2, 3))
+    dipole_derivative = np.zeros((3 * natoms, 3))
+    for i in range(2):
+        output = bodyformat.write(polarizability[i])
+        f.write(output + "\n")
+
+    for i in range(3 * natoms):
+        output = bodyformat.write(dipole_derivative[i])
+        f.write(output + "\n")
+
+
+    if hessian is not None:
+        for i in hessian:
+            output = bodyformat.write(i)
+            f.write(output + "\n")
+            print(output)
+
+
+    f.close()
+
+
+if __name__=="__main__":
+    n , c, s, coord, deriv = read_gauss_input(ifile)
+    cr = convert_to_xyz(coord)
+    if deriv ==1:
+        gradient, energy_scf, energy_nuc = pyscf_inp()
+        read_gauss_out(ofile, energy_scf, n, gradient)
+    elif deriv ==2:
+        gradient, energy_scf, energy_nuc, hessian = pyscf_inp_hess(n)
+        read_gauss_out(ofile, energy_scf, n, gradient, hessian=hessian)
+    
+
+#INFO: ******************** input file end ********************
+
+
+System: uname_result(system='Linux', node='c3cpu-a2-u32-1.rc.int.colorado.edu', release='4.18.0-305.34.2.el8_4.x86_64', version='#1 SMP Mon Jan 17 09:42:23 EST 2022', machine='x86_64')  Threads 1
+Python 3.9.13 (main, Aug 25 2022, 23:26:10) 
+[GCC 11.2.0]
+numpy 1.24.4  scipy 1.9.1  h5py 3.7.0
+Date: Mon Jun 23 02:10:26 2025
+PySCF version 2.9.0
+PySCF path  /projects/basi7344/software/alpine/new_pyscf/pyscf
+GIT HEAD (branch master) 8b41d9d71c45dae5cbfa6234a664275c528b9d36
+
+[ENV] PYSCF_TMPDIR /scratch/alpine/basi7344/TEMP
+[CONFIG] conf_file None
+[INPUT] verbose = 4
+[INPUT] num. atoms = 5
+[INPUT] num. electrons = 10
+[INPUT] charge = 0
+[INPUT] spin (= nelec alpha-beta = 2S) = 0
+[INPUT] symmetry False subgroup None
+[INPUT] Mole.unit = bohr
+[INPUT] Symbol           X                Y                Z      unit          X                Y                Z       unit  Magmom
+[INPUT]  1 C      0.000000000000   0.000000000000   0.000000000000 AA    0.000000000000   0.000000000000   0.000000000000 Bohr   0.0
+[INPUT]  2 H      0.629055615281   0.629055615281   0.629055615281 AA    1.188742830000   1.188742830000   1.188742830000 Bohr   0.0
+[INPUT]  3 H     -0.629055615281  -0.629055615281   0.629055615281 AA   -1.188742830000  -1.188742830000   1.188742830000 Bohr   0.0
+[INPUT]  4 H     -0.629055615281   0.629055615281  -0.629055615281 AA   -1.188742830000   1.188742830000  -1.188742830000 Bohr   0.0
+[INPUT]  5 H      0.629055615281  -0.629055615281  -0.629055615281 AA    1.188742830000  -1.188742830000  -1.188742830000 Bohr   0.0
+
+nuclear repulsion = 13.4408607151058
+number of shells = 17
+number of NR pGTOs = 54
+number of NR cGTOs = 34
+basis = ccpvdz
+ecp = {}
+CPU time:         0.38
+
+
+******** <class 'pyscf.scf.hf.RHF'> ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level_shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+diis_start_cycle = 1
+diis_space = 8
+diis_damp = 0
+SCF conv_tol = 1e-09
+SCF conv_tol_grad = None
+SCF max_cycles = 50
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /scratch/alpine/basi7344/TEMP/tmpe9ttuau0
+max_memory 4000 MB (current use 89 MB)
+Set gradient conv threshold to 3.16228e-05
+Initial guess from minao.
+init E= -40.0311995837307
+  HOMO = -0.472748125459454  LUMO = 0.132564735294248
+cycle= 1 E= -40.1910722039936  delta_E= -0.16  |g|= 0.147  |ddm|= 1.57
+  HOMO = -0.547575924460661  LUMO = 0.187994854598004
+cycle= 2 E= -40.1982077301039  delta_E= -0.00714  |g|= 0.0352  |ddm|= 0.115
+  HOMO = -0.540520109281125  LUMO = 0.193549133265013
+cycle= 3 E= -40.1986991482658  delta_E= -0.000491  |g|= 0.00526  |ddm|= 0.0338
+  HOMO = -0.542841496524219  LUMO = 0.193001858446341
+cycle= 4 E= -40.1987070763439  delta_E= -7.93e-06  |g|= 0.00117  |ddm|= 0.0047
+  HOMO = -0.542648517390718  LUMO = 0.19309782285429
+cycle= 5 E= -40.1987078363135  delta_E= -7.6e-07  |g|= 0.000137  |ddm|= 0.00224
+  HOMO = -0.542674288426282  LUMO = 0.193082867600594
+cycle= 6 E= -40.1987078473489  delta_E= -1.1e-08  |g|= 1.6e-05  |ddm|= 0.000431
+  HOMO = -0.542676165492212  LUMO = 0.193080189326348
+cycle= 7 E= -40.1987078474692  delta_E= -1.2e-10  |g|= 8.11e-07  |ddm|= 3.51e-05
+  HOMO = -0.542676032784577  LUMO = 0.193080274028584
+Extra cycle  E= -40.1987078474694  delta_E= -1.28e-13  |g|= 1.95e-07  |ddm|= 1.62e-06
+converged SCF energy = -40.1987078474694
+
+
+******** <class 'pyscf.grad.rhf.Gradients'> for <class 'pyscf.scf.hf.RHF'> ********
+unit = Eh/Bohr
+max_memory 4000 MB (current use 121 MB)
+--------------- RHF gradients ---------------
+         x                y                z
+0 C     0.0000000000    -0.0000000000     0.0000000000
+1 H    -0.0005139467    -0.0005139467    -0.0005139467
+2 H     0.0005139467     0.0005139467    -0.0005139467
+3 H     0.0005139467    -0.0005139467     0.0005139467
+4 H    -0.0005139467     0.0005139467     0.0005139467
+----------------------------------------------
+  0.609310425829D+00 -0.871092853839D-15  0.609310425774D+00
+ -0.128909126036D-14 -0.553185983635D-10  0.609310425772D+00
+ -0.152327606457D+00 -0.995550386078D-01 -0.995550386078D-01
+  0.159562997256D+00 -0.995550386129D-01 -0.152327606436D+00
+ -0.995550385924D-01  0.109405451056D+00  0.159562997974D+00
+ -0.995550386129D-01 -0.995550385924D-01 -0.152327606436D+00
+  0.109405451056D+00  0.109405451022D+00  0.159562997974D+00
+ -0.152327606457D+00 -0.995550386065D-01  0.995550386193D-01
+ -0.112094687456D-01 -0.985041233227D-02  0.127779662466D-01
+  0.159562996702D+00 -0.995550386129D-01 -0.152327606450D+00
+  0.995550386201D-01 -0.985041228479D-02 -0.112094687205D-01
+  0.127779662823D-01  0.109405449715D+00  0.159562996660D+00
+  0.995550386129D-01  0.995550386216D-01 -0.152327606448D+00
+ -0.127779667122D-01 -0.127779667265D-01  0.151835479876D-01
+ -0.109405450462D+00 -0.109405450470D+00  0.159562997399D+00
+ -0.152327606457D+00  0.995550386193D-01 -0.995550386065D-01
+ -0.112094687456D-01  0.127779662466D-01 -0.985041233227D-02
+  0.151835472725D-01 -0.127779674473D-01  0.127779674310D-01
+  0.159562996702D+00  0.995550386129D-01 -0.152327606448D+00
+  0.995550386216D-01 -0.127779667122D-01  0.151835479876D-01
+ -0.127779667265D-01  0.127779655325D-01 -0.112094694781D-01
+  0.985041303220D-02 -0.109405450462D+00  0.159562997399D+00
+ -0.995550386129D-01  0.995550386201D-01 -0.152327606450D+00
+ -0.985041228479D-02  0.127779662823D-01 -0.112094687205D-01
+ -0.127779662795D-01  0.985041229301D-02 -0.112094687351D-01
+  0.109405449715D+00 -0.109405449727D+00  0.159562996660D+00
+ -0.152327606457D+00  0.995550385949D-01  0.995550385949D-01
+  0.151835466921D-01 -0.127779679924D-01 -0.127779679924D-01
+ -0.112094682149D-01  0.127779668039D-01  0.985041182040D-02
+ -0.112094682149D-01  0.985041182040D-02  0.127779668039D-01
+  0.159562996194D+00  0.995550386129D-01 -0.152327606438D+00
+ -0.995550385940D-01  0.127779668706D-01 -0.112094681633D-01
+ -0.985041173944D-02 -0.127779680295D-01  0.151835466677D-01
+  0.127779679985D-01  0.985041174686D-02 -0.112094682017D-01
+ -0.127779668489D-01 -0.109405449201D+00  0.159562996135D+00
+  0.995550386129D-01 -0.995550385940D-01 -0.152327606438D+00
+  0.127779668706D-01 -0.985041173944D-02 -0.112094681633D-01
+  0.985041174686D-02 -0.127779668489D-01 -0.112094682017D-01
+ -0.127779680295D-01  0.127779679985D-01  0.151835466677D-01
+ -0.109405449201D+00  0.109405449184D+00  0.159562996135D+00
+ Recovered energy= -40.1987078475     dipole=      0.000000000000      0.000000000000      0.000000000000
+ Energy=    -40.1987078     NIter=   0.
+ Dipole moment=       0.000000       0.000000       0.000000
+ Leave Link  402 at Mon Jun 23 02:10:28 2025, MaxMem=  2684354560 cpu:               0.0 elap:               2.3
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l716.exe)
+ Dipole        = 0.00000000D+00 0.00000000D+00 0.00000000D+00
+ ***** Axes restored to original set *****
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        6           0.000000000   -0.000000000   -0.000000000
+      2        1           0.000296717   -0.000839275   -0.000000001
+      3        1           0.000296733    0.000419632    0.000726830
+      4        1           0.000296732    0.000419633   -0.000726830
+      5        1          -0.000890182    0.000000011    0.000000001
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     0.000890182 RMS     0.000459688
+ Force constants in Cartesian coordinates: 
+                1             2             3             4             5 
+      1  0.609310D+00
+      2  0.000000D+00  0.609310D+00
+      3  0.000000D+00  0.000000D+00  0.609310D+00
+      4 -0.859553D-01  0.938586D-01  0.000000D+00  0.866235D-01
+      5  0.938586D-01 -0.318255D+00  0.000000D+00 -0.103145D+00  0.341908D+00
+      6  0.000000D+00  0.000000D+00 -0.527726D-01  0.000000D+00  0.000000D+00
+      7 -0.859588D-01 -0.469311D-01 -0.812879D-01  0.415506D-02  0.513604D-02
+      8 -0.469311D-01 -0.119141D+00 -0.114955D+00 -0.129348D-01 -0.133775D-01
+      9 -0.812879D-01 -0.114955D+00 -0.251883D+00  0.153692D-02  0.144855D-02
+     10 -0.859586D-01 -0.469311D-01  0.812876D-01  0.415504D-02  0.513605D-02
+     11 -0.469311D-01 -0.119142D+00  0.114955D+00 -0.129347D-01 -0.133775D-01
+     12  0.812876D-01  0.114955D+00 -0.251883D+00 -0.153693D-02 -0.144857D-02
+     13 -0.351438D+00  0.361962D-05  0.000000D+00 -0.897832D-02 -0.985313D-03
+     14  0.361964D-05 -0.527726D-01  0.000000D+00  0.351562D-01  0.310199D-02
+     15  0.000000D+00  0.000000D+00 -0.527726D-01  0.000000D+00  0.000000D+00
+                6             7             8             9            10 
+      6  0.501575D-01
+      7  0.119697D-01  0.866274D-01
+      8 -0.280610D-01  0.515747D-01  0.123093D+00
+      9  0.198701D-02  0.893309D-01  0.126329D+00  0.268968D+00
+     10 -0.119697D-01  0.415533D-02  0.779834D-02 -0.104334D-01  0.866271D-01
+     11  0.280610D-01  0.779831D-02  0.966916D-02 -0.147546D-01  0.515746D-01
+     12  0.198707D-02  0.104333D-01  0.147546D-01 -0.210599D-01 -0.893305D-01
+     13  0.000000D+00 -0.897897D-02  0.492837D-03  0.853465D-03 -0.897892D-02
+     14  0.000000D+00 -0.175779D-01 -0.243487D-03  0.193187D-02 -0.175780D-01
+     15 -0.135906D-02 -0.304460D-01  0.193224D-02  0.198706D-02  0.304460D-01
+               11            12            13            14            15 
+     11  0.123093D+00
+     12 -0.126330D+00  0.268968D+00
+     13  0.492835D-03 -0.853447D-03  0.378374D+00
+     14 -0.243482D-03 -0.193185D-02 -0.397775D-05  0.501575D-01
+     15 -0.193224D-02  0.198701D-02  0.000000D+00  0.000000D+00  0.501575D-01
+ FormGI is forming the generalized inverse of G from B-inverse, IUseBI=4.
+ Force constants in internal coordinates: 
+                1             2             3             4             5 
+      1  0.378374D+00
+      2  0.206381D-02  0.378374D+00
+      3  0.206381D-02  0.206381D-02  0.378374D+00
+      4  0.206381D-02  0.206381D-02  0.206381D-02  0.378374D+00
+      5  0.199630D-02  0.199630D-02 -0.125349D-02 -0.273910D-02  0.218428D-01
+      6  0.312868D-02 -0.807400D-03  0.348191D-02 -0.580319D-02 -0.958801D-02
+      7  0.611404D-02 -0.490697D-02 -0.543178D-02  0.422472D-02 -0.144368D-01
+      8 -0.807400D-03  0.312868D-02  0.348191D-02 -0.580319D-02 -0.958801D-02
+      9 -0.490697D-02  0.611404D-02 -0.543178D-02  0.422472D-02 -0.144368D-01
+     10 -0.552464D-02 -0.552464D-02  0.515323D-02  0.589604D-02  0.262069D-01
+     11 -0.386644D-02 -0.386644D-02 -0.272925D-02  0.104621D-01 -0.150090D-01
+     12  0.318413D-02  0.318413D-02 -0.818775D-02  0.181950D-02  0.907042D-02
+     13 -0.419276D-02  0.737689D-02 -0.409388D-02  0.909750D-03  0.453521D-02
+     14 -0.737689D-02  0.419276D-02  0.409388D-02 -0.909750D-03 -0.453521D-02
+                6             7             8             9            10 
+      6  0.412863D-01
+      7 -0.250292D-01  0.806537D-01
+      8 -0.210612D-02  0.271016D-01  0.412863D-01
+      9  0.271016D-01 -0.389310D-01 -0.250292D-01  0.806537D-01
+     10 -0.316646D-01 -0.293583D-01 -0.316646D-01 -0.293583D-01  0.958389D-01
+     11 -0.122500D-01  0.164123D-01 -0.122500D-01  0.164123D-01  0.668427D-02
+     12 -0.104738D-01  0.786843D-02 -0.104738D-01  0.786843D-02 -0.385973D-02
+     13 -0.158474D-01 -0.757468D-03  0.537367D-02  0.862590D-02 -0.192987D-02
+     14 -0.537367D-02 -0.862590D-02  0.158474D-01  0.757468D-03  0.192987D-02
+               11            12            13            14 
+     11  0.333853D-01
+     12  0.171875D-02  0.207458D-01
+     13  0.859374D-03  0.103729D-01  0.210547D-01
+     14 -0.859374D-03 -0.103729D-01  0.106818D-01  0.210547D-01
+ Leave Link  716 at Mon Jun 23 02:10:28 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l103.exe)
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Using GEDIIS/GDIIS optimizer.
+ Red2BG is reusing G-inverse.
+ Internal  Forces:  Max     0.000890182 RMS     0.000475822
+ Search for a local minimum.
+ Step number   2 out of a maximum of   24
+ All quantities printed in internal units (Hartrees-Bohrs-Radians)
+ RMS Force = .47582D-03 SwitMx=.10000D-02 MixMth= 2
+ Mixed Optimization -- En-DIIS/RFO-DIIS
+ Second derivative matrix not updated -- analytic derivatives used.
+ DE= -1.22D-03 DEPred=-1.18D-03 R= 1.03D+00
+ TightC=F SS=  1.41D+00  RLast= 7.39D-02 DXNew= 5.0454D-01 2.2174D-01
+ Trust test= 1.03D+00 RLast= 7.39D-02 DXMaxT set to 3.00D-01
+ The second derivative matrix:
+                          R1        R2        R3        R4        A1
+           R1           0.37837
+           R2           0.00206   0.37837
+           R3           0.00206   0.00206   0.37837
+           R4           0.00206   0.00206   0.00206   0.37837
+           A1           0.00200   0.00200  -0.00125  -0.00274   0.02184
+           A2           0.00313  -0.00081   0.00348  -0.00580  -0.00959
+           A3           0.00611  -0.00491  -0.00543   0.00422  -0.01444
+           A4          -0.00081   0.00313   0.00348  -0.00580  -0.00959
+           A5          -0.00491   0.00611  -0.00543   0.00422  -0.01444
+           A6          -0.00552  -0.00552   0.00515   0.00590   0.02621
+           D1          -0.00387  -0.00387  -0.00273   0.01046  -0.01501
+           D2           0.00318   0.00318  -0.00819   0.00182   0.00907
+           D3          -0.00419   0.00738  -0.00409   0.00091   0.00454
+           D4          -0.00738   0.00419   0.00409  -0.00091  -0.00454
+                          A2        A3        A4        A5        A6
+           A2           0.04129
+           A3          -0.02503   0.08065
+           A4          -0.00211   0.02710   0.04129
+           A5           0.02710  -0.03893  -0.02503   0.08065
+           A6          -0.03166  -0.02936  -0.03166  -0.02936   0.09584
+           D1          -0.01225   0.01641  -0.01225   0.01641   0.00668
+           D2          -0.01047   0.00787  -0.01047   0.00787  -0.00386
+           D3          -0.01585  -0.00076   0.00537   0.00863  -0.00193
+           D4          -0.00537  -0.00863   0.01585   0.00076   0.00193
+                          D1        D2        D3        D4
+           D1           0.03339
+           D2           0.00172   0.02075
+           D3           0.00086   0.01037   0.02105
+           D4          -0.00086  -0.01037   0.01068   0.02105
+ ITU=  1  0
+ Use linear search instead of GDIIS.
+     Eigenvalues ---    0.04258   0.04801   0.07308   0.14536   0.14580
+     Eigenvalues ---    0.37720   0.37721   0.37749   0.38457
+ RFO step:  Lambda= 0.00000000D+00 EMin= 4.25787708D-02
+ Quintic linear search produced a step of  0.06284.
+ Iteration  1 RMS(Cart)=  0.00124143 RMS(Int)=  0.00000000
+ Iteration  2 RMS(Cart)=  0.00000000 RMS(Int)=  0.00000000
+ ITry= 1 IFail=0 DXMaxC= 2.32D-03 DCOld= 1.00D+10 DXMaxT= 3.00D-01 DXLimC= 3.00D+00 Rises=F
+ ClnCor:  largest displacement from symmetrization is 1.26D-14 for atom     4.
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.05896   0.00089   0.00232   0.00000   0.00232   2.06129
+    R2        2.05896   0.00089   0.00232   0.00000   0.00232   2.06129
+    R3        2.05896   0.00089   0.00232  -0.00000   0.00232   2.06129
+    R4        2.05896   0.00089   0.00232   0.00000   0.00232   2.06129
+    A1        1.91063   0.00000  -0.00000   0.00000   0.00000   1.91063
+    A2        1.91063  -0.00000  -0.00000  -0.00000   0.00000   1.91063
+    A3        1.91063   0.00000   0.00000   0.00000   0.00000   1.91063
+    A4        1.91063  -0.00000   0.00000  -0.00000   0.00000   1.91063
+    A5        1.91063  -0.00000  -0.00000  -0.00000   0.00000   1.91063
+    A6        1.91063   0.00000  -0.00000   0.00000   0.00000   1.91063
+    D1       -2.09440   0.00000  -0.00000   0.00000   0.00000  -2.09440
+    D2        2.09440   0.00000   0.00000   0.00000   0.00000   2.09440
+    D3       -2.09440  -0.00000   0.00000  -0.00000   0.00000  -2.09440
+    D4        2.09440  -0.00000   0.00000  -0.00000   0.00000   2.09440
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.000890     0.000450     NO 
+ RMS     Force            0.000476     0.000300     NO 
+ Maximum Displacement     0.002322     0.001800     NO 
+ RMS     Displacement     0.001241     0.001200     NO 
+ Predicted change in Energy=-4.121093D-06
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+ Leave Link  103 at Mon Jun 23 02:10:28 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l202.exe)
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6           0       -0.808824    0.294118    0.000000
+      2          1           0       -0.445241   -0.734289   -0.000001
+      3          1           0       -0.445222    0.808314    0.890622
+      4          1           0       -0.445223    0.808315   -0.890622
+      5          1           0       -1.899609    0.294131    0.000001
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  C    0.000000
+     2  H    1.090785   0.000000
+     3  H    1.090785   1.781245   0.000000
+     4  H    1.090785   1.781245   1.781245   0.000000
+     5  H    1.090785   1.781245   1.781245   1.781245   0.000000
+ Stoichiometry    CH4
+ Framework group  TD[O(C),4C3(H)]
+ Deg. of freedom     1
+ Full point group                 TD      NOp  24
+ RotChk:  IX=0 Diff= 3.17D-15
+ Largest Abelian subgroup         D2      NOp   4
+ Largest concise Abelian subgroup D2      NOp   4
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6           0        0.000000    0.000000    0.000000
+      2          1           0        0.629765    0.629765    0.629765
+      3          1           0       -0.629765   -0.629765    0.629765
+      4          1           0       -0.629765    0.629765   -0.629765
+      5          1           0        0.629765   -0.629765   -0.629765
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):         158.0464584         158.0464584         158.0464584
+ Leave Link  202 at Mon Jun 23 02:10:28 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l301.exe)
+ Standard basis: STO-3G (5D, 7F)
+ Ernie: Thresh=  0.10000D-02 Tol=  0.10000D-05 Strict=F.
+ There are     3 symmetry adapted cartesian basis functions of A   symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B1  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B2  symmetry.
+ There are     2 symmetry adapted cartesian basis functions of B3  symmetry.
+ There are     3 symmetry adapted basis functions of A   symmetry.
+ There are     2 symmetry adapted basis functions of B1  symmetry.
+ There are     2 symmetry adapted basis functions of B2  symmetry.
+ There are     2 symmetry adapted basis functions of B3  symmetry.
+     9 basis functions,    27 primitive gaussians,     9 cartesian basis functions
+     5 alpha electrons        5 beta electrons
+       nuclear repulsion energy        13.4257165357 Hartrees.
+ IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ NAtoms=    5 NActive=    5 NUniq=    2 SFac= 4.00D+00 NAtFMM=   60 NAOKFM=F Big=F
+ Integral buffers will be    131072 words long.
+ Raffenetti 1 integral format.
+ Two-electron integral symmetry is turned on.
+ Leave Link  301 at Mon Jun 23 02:10:28 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l402.exe)
+ External calculation of energy, first and second derivatives.
+ Running external command " python utils.py R"
+         input file       "/scratch/local/15123732/Gau-142986.EIn"
+         output file      "/scratch/local/15123732/Gau-142986.EOu"
+         message file     "/scratch/local/15123732/Gau-142986.EMs"
+         fchk file        "/scratch/local/15123732/Gau-142986.EFC"
+         mat. el file     "/scratch/local/15123732/Gau-142986.EUF"
+#INFO: **** input file is /projects/basi7344/software/alpine/research/external_gau/final_script/new_test/again_try/utils.py ****
+from pyscf import gto, scf,lib
+from pyscf.hessian import thermo 
+import sys
+import os
+import numpy as np
+import fortranformat as ff
+
+basis = 'ccpvdz'
+ifile = sys.argv[2]
+ofile = sys.argv[3]
+
+def read_gauss_input(ifile):
+    with open(ifile, "r") as ifile:
+        gau_input = ifile.readlines()
+
+    tokens = gau_input[0].split()
+
+    natoms = int(tokens[0])
+    deriv = int(tokens[1])
+    chrg = int(tokens[2])
+    spin = int(tokens[3]) -1 
+    coords = np.empty((natoms, 4))
+    atomtypes=[]
+    for i, line in enumerate(gau_input[1 : 1 + natoms]):
+        line = line.split()
+        line_re = line[:-1]
+        coords[i] = line_re
+    return natoms, chrg, spin, coords, deriv
+
+def convert_to_xyz(data):
+    coord_empty = ''
+    coord_final =''
+    for i, value in enumerate(data):
+        coord_empty = ' '.join(f'{x:.8f}' if not float(x).is_integer() else f'{int(x)}' for x in value) 
+        coord_final += coord_empty
+        if i < len(data)-1:
+            coord_final += ';'
+    return coord_final
+
+def pyscf_inp():
+    mol=gto.Mole()
+    mol.spin = s
+    mol.charge = c
+    mol.basis = basis
+    mol.atom = cr
+    mol.unit = 'bohr'
+    mol.verbose = 4
+    mol.build()
+    mf = scf.RHF(mol)
+    scf_ener = mf.scf()
+    nuc_ener = mf.energy_nuc()
+    g = mf.nuc_grad_method()
+    grad = g.kernel()
+    return grad, scf_ener, nuc_ener
+
+def pyscf_inp_hess(natoms):
+    mol=gto.Mole()
+    mol.spin = s
+    mol.charge = c
+    mol.basis = basis
+    mol.atom = cr
+    mol.unit = 'bohr'
+    mol.verbose = 4
+    mol.build()
+    mf = scf.RHF(mol)
+    scf_ener = mf.scf()
+    nuc_ener = mf.energy_nuc()
+    g = mf.nuc_grad_method()
+    grad = g.kernel()
+    hess = mf.Hessian().kernel()
+    hess_2d = hess.transpose(0,2,1,3).reshape(natoms*3,natoms*3)
+    lower_hess = hess_2d[np.tril_indices(hess_2d.shape[0])]
+    hess_f = lower_hess.reshape(int(lower_hess.shape[0]/3),3)
+    return grad, scf_ener, nuc_ener, hess_f
+
+
+def read_gauss_out(ofile, energy, natoms, gradient, hessian=None):
+
+    headformat = ff.FortranRecordWriter("4D20.12")
+    bodyformat = ff.FortranRecordWriter("3D20.12")
+
+    f = open(ofile, "w")
+    head = [energy, 0 , 0, 0]
+    headstring = headformat.write(head)
+    f.write(headstring + "\n")
+
+    for i in range(natoms):
+        output = bodyformat.write(gradient[i])
+        f.write(output + "\n")
+    
+        # polarizability and dipole derivatives are set to zero
+    polarizability = np.zeros((2, 3))
+    dipole_derivative = np.zeros((3 * natoms, 3))
+    for i in range(2):
+        output = bodyformat.write(polarizability[i])
+        f.write(output + "\n")
+
+    for i in range(3 * natoms):
+        output = bodyformat.write(dipole_derivative[i])
+        f.write(output + "\n")
+
+
+    if hessian is not None:
+        for i in hessian:
+            output = bodyformat.write(i)
+            f.write(output + "\n")
+            print(output)
+
+
+    f.close()
+
+
+if __name__=="__main__":
+    n , c, s, coord, deriv = read_gauss_input(ifile)
+    cr = convert_to_xyz(coord)
+    if deriv ==1:
+        gradient, energy_scf, energy_nuc = pyscf_inp()
+        read_gauss_out(ofile, energy_scf, n, gradient)
+    elif deriv ==2:
+        gradient, energy_scf, energy_nuc, hessian = pyscf_inp_hess(n)
+        read_gauss_out(ofile, energy_scf, n, gradient, hessian=hessian)
+    
+
+#INFO: ******************** input file end ********************
+
+
+System: uname_result(system='Linux', node='c3cpu-a2-u32-1.rc.int.colorado.edu', release='4.18.0-305.34.2.el8_4.x86_64', version='#1 SMP Mon Jan 17 09:42:23 EST 2022', machine='x86_64')  Threads 1
+Python 3.9.13 (main, Aug 25 2022, 23:26:10) 
+[GCC 11.2.0]
+numpy 1.24.4  scipy 1.9.1  h5py 3.7.0
+Date: Mon Jun 23 02:10:29 2025
+PySCF version 2.9.0
+PySCF path  /projects/basi7344/software/alpine/new_pyscf/pyscf
+GIT HEAD (branch master) 8b41d9d71c45dae5cbfa6234a664275c528b9d36
+
+[ENV] PYSCF_TMPDIR /scratch/alpine/basi7344/TEMP
+[CONFIG] conf_file None
+[INPUT] verbose = 4
+[INPUT] num. atoms = 5
+[INPUT] num. electrons = 10
+[INPUT] charge = 0
+[INPUT] spin (= nelec alpha-beta = 2S) = 0
+[INPUT] symmetry False subgroup None
+[INPUT] Mole.unit = bohr
+[INPUT] Symbol           X                Y                Z      unit          X                Y                Z       unit  Magmom
+[INPUT]  1 C      0.000000000000   0.000000000000   0.000000000000 AA    0.000000000000   0.000000000000   0.000000000000 Bohr   0.0
+[INPUT]  2 H      0.629765189003   0.629765189003   0.629765189003 AA    1.190083730000   1.190083730000   1.190083730000 Bohr   0.0
+[INPUT]  3 H     -0.629765189003  -0.629765189003   0.629765189003 AA   -1.190083730000  -1.190083730000   1.190083730000 Bohr   0.0
+[INPUT]  4 H     -0.629765189003   0.629765189003  -0.629765189003 AA   -1.190083730000   1.190083730000  -1.190083730000 Bohr   0.0
+[INPUT]  5 H      0.629765189003  -0.629765189003  -0.629765189003 AA    1.190083730000  -1.190083730000  -1.190083730000 Bohr   0.0
+
+nuclear repulsion = 13.4257165284586
+number of shells = 17
+number of NR pGTOs = 54
+number of NR cGTOs = 34
+basis = ccpvdz
+ecp = {}
+CPU time:         0.38
+
+
+******** <class 'pyscf.scf.hf.RHF'> ********
+method = RHF
+initial guess = minao
+damping factor = 0
+level_shift factor = 0
+DIIS = <class 'pyscf.scf.diis.CDIIS'>
+diis_start_cycle = 1
+diis_space = 8
+diis_damp = 0
+SCF conv_tol = 1e-09
+SCF conv_tol_grad = None
+SCF max_cycles = 50
+direct_scf = True
+direct_scf_tol = 1e-13
+chkfile to save SCF result = /scratch/alpine/basi7344/TEMP/tmp001wmbbl
+max_memory 4000 MB (current use 88 MB)
+Set gradient conv threshold to 3.16228e-05
+Initial guess from minao.
+init E= -40.0275062139578
+  HOMO = -0.472141337099711  LUMO = 0.132356710293225
+cycle= 1 E= -40.1910699191174  delta_E= -0.164  |g|= 0.147  |ddm|= 1.57
+  HOMO = -0.547385575949204  LUMO = 0.187787340078468
+cycle= 2 E= -40.1982109830953  delta_E= -0.00714  |g|= 0.0352  |ddm|= 0.115
+  HOMO = -0.540116704498458  LUMO = 0.193420761934712
+cycle= 3 E= -40.1987027887559  delta_E= -0.000492  |g|= 0.00546  |ddm|= 0.0339
+  HOMO = -0.542509731573998  LUMO = 0.192852987556817
+cycle= 4 E= -40.1987111965247  delta_E= -8.41e-06  |g|= 0.00117  |ddm|= 0.00475
+  HOMO = -0.542340157714153  LUMO = 0.192943934450501
+cycle= 5 E= -40.1987119667246  delta_E= -7.7e-07  |g|= 0.000136  |ddm|= 0.00227
+  HOMO = -0.542365547286353  LUMO = 0.192929156819992
+cycle= 6 E= -40.1987119776862  delta_E= -1.1e-08  |g|= 1.61e-05  |ddm|= 0.00043
+  HOMO = -0.542367453819076  LUMO = 0.192926460237801
+cycle= 7 E= -40.198711977808  delta_E= -1.22e-10  |g|= 8.15e-07  |ddm|= 3.54e-05
+  HOMO = -0.542367319673978  LUMO = 0.192926545781334
+Extra cycle  E= -40.1987119778083  delta_E= -3.13e-13  |g|= 1.96e-07  |ddm|= 1.63e-06
+converged SCF energy = -40.1987119778083
+
+
+******** <class 'pyscf.grad.rhf.Gradients'> for <class 'pyscf.scf.hf.RHF'> ********
+unit = Eh/Bohr
+max_memory 4000 MB (current use 121 MB)
+--------------- RHF gradients ---------------
+         x                y                z
+0 C    -0.0000000000    -0.0000000000     0.0000000000
+1 H     0.0000000020     0.0000000020     0.0000000020
+2 H    -0.0000000020    -0.0000000020     0.0000000020
+3 H    -0.0000000020     0.0000000020    -0.0000000020
+4 H     0.0000000020    -0.0000000020    -0.0000000020
+----------------------------------------------
+  0.606565380812D+00 -0.431180637124D-14  0.606565380754D+00
+ -0.229072714278D-14 -0.571171608758D-10  0.606565380754D+00
+ -0.151641345202D+00 -0.986133317966D-01 -0.986133317966D-01
+  0.158879332405D+00 -0.986133318035D-01 -0.151641345180D+00
+ -0.986133317808D-01  0.108447039129D+00  0.158879333114D+00
+ -0.986133318035D-01 -0.986133317808D-01 -0.151641345180D+00
+  0.108447039129D+00  0.108447039092D+00  0.158879333114D+00
+ -0.151641345202D+00 -0.986133317984D-01  0.986133318086D-01
+ -0.111850186832D-01 -0.983370721331D-02  0.127332674361D-01
+  0.158879331853D+00 -0.986133318035D-01 -0.151641345197D+00
+  0.986133318093D-01 -0.983370717000D-02 -0.111850186577D-01
+  0.127332674699D-01  0.108447037796D+00  0.158879331814D+00
+  0.986133318035D-01  0.986133318141D-01 -0.151641345192D+00
+ -0.127332678971D-01 -0.127332679143D-01  0.151320514456D-01
+ -0.108447038535D+00 -0.108447038544D+00  0.158879332540D+00
+ -0.151641345202D+00  0.986133318086D-01 -0.986133317984D-01
+ -0.111850186832D-01  0.127332674361D-01 -0.983370721331D-02
+  0.151320507368D-01 -0.127332686276D-01  0.127332686149D-01
+  0.158879331853D+00  0.986133318035D-01 -0.151641345192D+00
+  0.986133318141D-01 -0.127332678971D-01  0.151320514456D-01
+ -0.127332679143D-01  0.127332667294D-01 -0.111850194075D-01
+  0.983370790290D-02 -0.108447038535D+00  0.158879332540D+00
+ -0.986133318035D-01  0.986133318093D-01 -0.151641345197D+00
+ -0.983370717000D-02  0.127332674699D-01 -0.111850186577D-01
+ -0.127332674677D-01  0.983370717659D-02 -0.111850186694D-01
+  0.108447037796D+00 -0.108447037806D+00  0.158879331814D+00
+ -0.151641345202D+00  0.986133317865D-01  0.986133317865D-01
+  0.151320501635D-01 -0.127332691686D-01 -0.127332691686D-01
+ -0.111850181545D-01  0.127332679881D-01  0.983370670388D-02
+ -0.111850181545D-01  0.983370670388D-02  0.127332679881D-01
+  0.158879331348D+00  0.986133318035D-01 -0.151641345184D+00
+ -0.986133317855D-01  0.127332680523D-01 -0.111850181047D-01
+ -0.983370662645D-02 -0.127332692050D-01  0.151320501390D-01
+  0.127332691759D-01  0.983370663334D-02 -0.111850181407D-01
+ -0.127332680319D-01 -0.108447037284D+00  0.158879331291D+00
+  0.986133318035D-01 -0.986133317855D-01 -0.151641345184D+00
+  0.127332680523D-01 -0.983370662645D-02 -0.111850181047D-01
+  0.983370663334D-02 -0.127332680319D-01 -0.111850181407D-01
+ -0.127332692050D-01  0.127332691759D-01  0.151320501390D-01
+ -0.108447037284D+00  0.108447037268D+00  0.158879331291D+00
+ Recovered energy= -40.1987119778     dipole=      0.000000000000      0.000000000000      0.000000000000
+ Energy=    -40.1987120     NIter=   0.
+ Dipole moment=       0.000000       0.000000       0.000000
+ Leave Link  402 at Mon Jun 23 02:10:30 2025, MaxMem=  2684354560 cpu:               0.0 elap:               2.3
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l716.exe)
+ Dipole        = 0.00000000D+00 0.00000000D+00 0.00000000D+00
+ ***** Axes restored to original set *****
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        6           0.000000000   -0.000000000   -0.000000000
+      2        1          -0.000000001    0.000000003    0.000000000
+      3        1          -0.000000001   -0.000000002   -0.000000003
+      4        1          -0.000000001   -0.000000002    0.000000003
+      5        1           0.000000003   -0.000000000   -0.000000000
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     0.000000003 RMS     0.000000002
+ Force constants in Cartesian coordinates: 
+                1             2             3             4             5 
+      1  0.606565D+00
+      2  0.000000D+00  0.606565D+00
+      3  0.000000D+00  0.000000D+00  0.606565D+00
+      4 -0.858969D-01  0.929708D-01  0.000000D+00  0.865788D-01
+      5  0.929708D-01 -0.315999D+00  0.000000D+00 -0.102242D+00  0.339627D+00
+      6  0.000000D+00  0.000000D+00 -0.530280D-01  0.000000D+00  0.000000D+00
+      7 -0.859004D-01 -0.464872D-01 -0.805190D-01  0.414306D-02  0.511840D-02
+      8 -0.464872D-01 -0.118769D+00 -0.113868D+00 -0.128892D-01 -0.133545D-01
+      9 -0.805190D-01 -0.113868D+00 -0.250255D+00  0.153098D-02  0.142850D-02
+     10 -0.859001D-01 -0.464871D-01  0.805187D-01  0.414304D-02  0.511841D-02
+     11 -0.464871D-01 -0.118769D+00  0.113868D+00 -0.128891D-01 -0.133546D-01
+     12  0.805187D-01  0.113868D+00 -0.250255D+00 -0.153100D-02 -0.142853D-02
+     13 -0.348868D+00  0.358538D-05  0.000000D+00 -0.896805D-02 -0.965776D-03
+     14  0.358540D-05 -0.530280D-01  0.000000D+00  0.350493D-01  0.308138D-02
+     15  0.000000D+00  0.000000D+00 -0.530280D-01  0.000000D+00  0.000000D+00
+                6             7             8             9            10 
+      6  0.504323D-01
+      7  0.119273D-01  0.865827D-01
+      8 -0.279778D-01  0.511229D-01  0.122729D+00
+      9  0.197349D-02  0.885483D-01  0.125223D+00  0.267326D+00
+     10 -0.119273D-01  0.414333D-02  0.777042D-02 -0.103969D-01  0.865824D-01
+     11  0.279778D-01  0.777038D-02  0.963741D-02 -0.147030D-01  0.511228D-01
+     12  0.197354D-02  0.103968D-01  0.147030D-01 -0.210187D-01 -0.885480D-01
+     13  0.000000D+00 -0.896870D-02  0.483068D-03  0.836545D-03 -0.896865D-02
+     14  0.000000D+00 -0.175245D-01 -0.242832D-03  0.191959D-02 -0.175245D-01
+     15 -0.135131D-02 -0.303535D-01  0.191996D-02  0.197354D-02  0.303535D-01
+               11            12            13            14            15 
+     11  0.122729D+00
+     12 -0.125223D+00  0.267326D+00
+     13  0.483066D-03 -0.836527D-03  0.375773D+00
+     14 -0.242827D-03 -0.191957D-02 -0.394291D-05  0.504323D-01
+     15 -0.191996D-02  0.197349D-02  0.000000D+00  0.000000D+00  0.504323D-01
+ FormGI is forming the generalized inverse of G from B-inverse, IUseBI=4.
+ Force constants in internal coordinates: 
+                1             2             3             4             5 
+      1  0.375773D+00
+      2  0.207881D-02  0.375773D+00
+      3  0.207881D-02  0.207881D-02  0.375773D+00
+      4  0.207881D-02  0.207881D-02  0.207881D-02  0.375773D+00
+      5  0.199487D-02  0.199487D-02 -0.125259D-02 -0.273714D-02  0.218229D-01
+      6  0.312644D-02 -0.806822D-03  0.347942D-02 -0.579903D-02 -0.957859D-02
+      7  0.610966D-02 -0.490346D-02 -0.542790D-02  0.422170D-02 -0.144234D-01
+      8 -0.806822D-03  0.312644D-02  0.347942D-02 -0.579903D-02 -0.957859D-02
+      9 -0.490346D-02  0.610966D-02 -0.542790D-02  0.422170D-02 -0.144234D-01
+     10 -0.552068D-02 -0.552068D-02  0.514954D-02  0.589182D-02  0.261811D-01
+     11 -0.386367D-02 -0.386367D-02 -0.272730D-02  0.104546D-01 -0.149962D-01
+     12  0.318185D-02  0.318185D-02 -0.818189D-02  0.181820D-02  0.906249D-02
+     13 -0.418976D-02  0.737161D-02 -0.409095D-02  0.909099D-03  0.453125D-02
+     14 -0.737161D-02  0.418976D-02  0.409095D-02 -0.909099D-03 -0.453125D-02
+                6             7             8             9            10 
+      6  0.412494D-01
+      7 -0.250065D-01  0.805817D-01
+      8 -0.210295D-02  0.270745D-01  0.412494D-01
+      9  0.270745D-01 -0.388950D-01 -0.250065D-01  0.805817D-01
+     10 -0.316359D-01 -0.293312D-01 -0.316359D-01 -0.293312D-01  0.957531D-01
+     11 -0.122409D-01  0.163986D-01 -0.122409D-01  0.163986D-01  0.668070D-02
+     12 -0.104649D-01  0.786274D-02 -0.104649D-01  0.786274D-02 -0.385810D-02
+     13 -0.158338D-01 -0.757817D-03  0.536886D-02  0.862056D-02 -0.192905D-02
+     14 -0.536886D-02 -0.862056D-02  0.158338D-01  0.757817D-03  0.192905D-02
+               11            12            13            14 
+     11  0.333585D-01
+     12  0.171764D-02  0.207291D-01
+     13  0.858820D-03  0.103645D-01  0.210377D-01
+     14 -0.858820D-03 -0.103645D-01  0.106732D-01  0.210377D-01
+ Leave Link  716 at Mon Jun 23 02:10:30 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l103.exe)
+
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+ Berny optimization.
+ Using GEDIIS/GDIIS optimizer.
+ Red2BG is reusing G-inverse.
+ Internal  Forces:  Max     0.000000003 RMS     0.000000002
+ Search for a local minimum.
+ Step number   3 out of a maximum of   24
+ All quantities printed in internal units (Hartrees-Bohrs-Radians)
+ RMS Force = .18549D-08 SwitMx=.10000D-02 MixMth= 2
+ Mixed Optimization -- En-DIIS/RFO-DIIS
+ Swapping is turned off.
+ Second derivative matrix not updated -- analytic derivatives used.
+ DE= -4.13D-06 DEPred=-4.12D-06 R= 1.00D+00
+ TightC=F SS=  1.41D+00  RLast= 4.64D-03 DXNew= 5.0454D-01 1.3935D-02
+ Trust test= 1.00D+00 RLast= 4.64D-03 DXMaxT set to 3.00D-01
+ The second derivative matrix:
+                          R1        R2        R3        R4        A1
+           R1           0.37577
+           R2           0.00208   0.37577
+           R3           0.00208   0.00208   0.37577
+           R4           0.00208   0.00208   0.00208   0.37577
+           A1           0.00199   0.00199  -0.00125  -0.00274   0.02182
+           A2           0.00313  -0.00081   0.00348  -0.00580  -0.00958
+           A3           0.00611  -0.00490  -0.00543   0.00422  -0.01442
+           A4          -0.00081   0.00313   0.00348  -0.00580  -0.00958
+           A5          -0.00490   0.00611  -0.00543   0.00422  -0.01442
+           A6          -0.00552  -0.00552   0.00515   0.00589   0.02618
+           D1          -0.00386  -0.00386  -0.00273   0.01045  -0.01500
+           D2           0.00318   0.00318  -0.00818   0.00182   0.00906
+           D3          -0.00419   0.00737  -0.00409   0.00091   0.00453
+           D4          -0.00737   0.00419   0.00409  -0.00091  -0.00453
+                          A2        A3        A4        A5        A6
+           A2           0.04125
+           A3          -0.02501   0.08058
+           A4          -0.00210   0.02707   0.04125
+           A5           0.02707  -0.03890  -0.02501   0.08058
+           A6          -0.03164  -0.02933  -0.03164  -0.02933   0.09575
+           D1          -0.01224   0.01640  -0.01224   0.01640   0.00668
+           D2          -0.01046   0.00786  -0.01046   0.00786  -0.00386
+           D3          -0.01583  -0.00076   0.00537   0.00862  -0.00193
+           D4          -0.00537  -0.00862   0.01583   0.00076   0.00193
+                          D1        D2        D3        D4
+           D1           0.03336
+           D2           0.00172   0.02073
+           D3           0.00086   0.01036   0.02104
+           D4          -0.00086  -0.01036   0.01067   0.02104
+ ITU=  1  1  0
+     Eigenvalues ---    0.04254   0.04796   0.07302   0.14522   0.14566
+     Eigenvalues ---    0.37459   0.37461   0.37488   0.38201
+ En-DIIS/RFO-DIIS/Sim-DIIS IScMMF=       -3 using points:     3    2
+ RFO step:  Lambda=-1.23682135D-16.
+ NNeg= 0 NGDIIS= 2 SimSw=  2.50D-03 Rises=F DC= -4.13D-06 SmlDif=  1.00D-05
+ NRisDI= 0 DoIntr=F SqrtH=F CThrHd= 10.0 CDAdj=  3.0
+ RMS Error=  0.4855697129D-08 NUsed= 2 OKEnD=F EnDIS=F
+ InvSVX:  RCond= 2.44D-05 Info=           0 Equed=N FErr=  8.88D-16 BErr=  2.19D-17
+ DidBck=F Rises=F RFO-DIIS coefs:    1.00000    0.00000
+ Iteration  1 RMS(Cart)=  0.00000000 RMS(Int)=  0.00000000
+ ITry= 1 IFail=0 DXMaxC= 9.05D-09 DCOld= 1.00D+10 DXMaxT= 3.00D-01 DXLimC= 3.00D+00 Rises=F
+ ClnCor:  largest displacement from symmetrization is 1.95D-14 for atom     3.
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.06129  -0.00000  -0.00000   0.00000  -0.00000   2.06129
+    R2        2.06129  -0.00000  -0.00000  -0.00000  -0.00000   2.06129
+    R3        2.06129  -0.00000  -0.00000  -0.00000  -0.00000   2.06129
+    R4        2.06129  -0.00000  -0.00000  -0.00000  -0.00000   2.06129
+    A1        1.91063  -0.00000   0.00000  -0.00000  -0.00000   1.91063
+    A2        1.91063   0.00000   0.00000   0.00000   0.00000   1.91063
+    A3        1.91063   0.00000   0.00000   0.00000   0.00000   1.91063
+    A4        1.91063   0.00000   0.00000  -0.00000   0.00000   1.91063
+    A5        1.91063  -0.00000   0.00000  -0.00000   0.00000   1.91063
+    A6        1.91063  -0.00000   0.00000  -0.00000  -0.00000   1.91063
+    D1       -2.09440  -0.00000   0.00000   0.00000   0.00000  -2.09440
+    D2        2.09440  -0.00000   0.00000  -0.00000   0.00000   2.09440
+    D3       -2.09440  -0.00000   0.00000  -0.00000   0.00000  -2.09440
+    D4        2.09440  -0.00000   0.00000  -0.00000   0.00000   2.09440
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.000000     0.000450     YES
+ RMS     Force            0.000000     0.000300     YES
+ Maximum Displacement     0.000000     0.001800     YES
+ RMS     Displacement     0.000000     0.001200     YES
+ Predicted change in Energy=-6.304795D-17
+ Optimization completed.
+    -- Stationary point found.
+                           ----------------------------
+                           !   Optimized Parameters   !
+                           ! (Angstroms and Degrees)  !
+ --------------------------                            --------------------------
+ ! Name  Definition              Value          Derivative Info.                !
+ --------------------------------------------------------------------------------
+ ! R1    R(1,2)                  1.0908         -DE/DX =    0.0                 !
+ ! R2    R(1,3)                  1.0908         -DE/DX =    0.0                 !
+ ! R3    R(1,4)                  1.0908         -DE/DX =    0.0                 !
+ ! R4    R(1,5)                  1.0908         -DE/DX =    0.0                 !
+ ! A1    A(2,1,3)              109.4712         -DE/DX =    0.0                 !
+ ! A2    A(2,1,4)              109.4712         -DE/DX =    0.0                 !
+ ! A3    A(2,1,5)              109.4712         -DE/DX =    0.0                 !
+ ! A4    A(3,1,4)              109.4712         -DE/DX =    0.0                 !
+ ! A5    A(3,1,5)              109.4712         -DE/DX =    0.0                 !
+ ! A6    A(4,1,5)              109.4712         -DE/DX =    0.0                 !
+ ! D1    D(2,1,4,3)           -120.0            -DE/DX =    0.0                 !
+ ! D2    D(2,1,5,3)            120.0            -DE/DX =    0.0                 !
+ ! D3    D(2,1,5,4)           -120.0            -DE/DX =    0.0                 !
+ ! D4    D(3,1,5,4)            120.0            -DE/DX =    0.0                 !
+ --------------------------------------------------------------------------------
+ Largest change from initial coordinates is atom    5       0.021 Angstoms.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+ Leave Link  103 at Mon Jun 23 02:10:30 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l202.exe)
+                          Input orientation:                          
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6           0       -0.808824    0.294118    0.000000
+      2          1           0       -0.445241   -0.734289   -0.000001
+      3          1           0       -0.445222    0.808314    0.890622
+      4          1           0       -0.445223    0.808315   -0.890622
+      5          1           0       -1.899609    0.294131    0.000001
+ ---------------------------------------------------------------------
+                    Distance matrix (angstroms):
+                    1          2          3          4          5
+     1  C    0.000000
+     2  H    1.090785   0.000000
+     3  H    1.090785   1.781245   0.000000
+     4  H    1.090785   1.781245   1.781245   0.000000
+     5  H    1.090785   1.781245   1.781245   1.781245   0.000000
+ Stoichiometry    CH4
+ Framework group  TD[O(C),4C3(H)]
+ Deg. of freedom     1
+ Full point group                 TD      NOp  24
+ RotChk:  IX=0 Diff= 2.71D-15
+ Largest Abelian subgroup         D2      NOp   4
+ Largest concise Abelian subgroup D2      NOp   4
+                         Standard orientation:                         
+ ---------------------------------------------------------------------
+ Center     Atomic      Atomic             Coordinates (Angstroms)
+ Number     Number       Type             X           Y           Z
+ ---------------------------------------------------------------------
+      1          6           0        0.000000    0.000000    0.000000
+      2          1           0        0.629765    0.629765    0.629765
+      3          1           0       -0.629765   -0.629765    0.629765
+      4          1           0       -0.629765    0.629765   -0.629765
+      5          1           0        0.629765   -0.629765   -0.629765
+ ---------------------------------------------------------------------
+ Rotational constants (GHZ):         158.0464584         158.0464584         158.0464584
+ Leave Link  202 at Mon Jun 23 02:10:30 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l601.exe)
+ Leave Link  601 at Mon Jun 23 02:10:30 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l716.exe)
+ Rotating derivatives to standard orientation.
+ Dipole        = 0.00000000D+00 0.00000000D+00 0.00000000D+00
+ Full mass-weighted force constant matrix:
+ Low frequencies ---   -0.1128   -0.0756   -0.0562    0.0150    0.0977    0.1276
+ Low frequencies --- 1433.2777 1433.2777 1433.2777
+ Diagonal vibrational polarizability:
+        0.0000000       0.0000000       0.0000000
+ Harmonic frequencies (cm**-1), IR intensities (KM/Mole), Raman scattering
+ activities (A**4/AMU), depolarization ratios for plane and unpolarized
+ incident light, reduced masses (AMU), force constants (mDyne/A),
+ and normal coordinates:
+                      1                      2                      3
+                     T2                     T2                     T2
+ Frequencies --   1433.2777              1433.2777              1433.2777
+ Red. masses --      1.1781                 1.1781                 1.1781
+ Frc consts  --      1.4259                 1.4259                 1.4259
+ IR Inten    --      0.0000                 0.0000                 0.0000
+  Atom  AN      X      Y      Z        X      Y      Z        X      Y      Z
+     1   6    -0.08   0.07   0.06    -0.05   0.03  -0.11    -0.08  -0.10   0.01
+     2   1     0.49  -0.26  -0.20     0.01  -0.39   0.28     0.07   0.17  -0.36
+     3   1     0.27  -0.48  -0.15     0.41   0.02   0.37     0.02   0.13   0.29
+     4   1     0.22  -0.17  -0.47    -0.10   0.22   0.17     0.43   0.41   0.01
+     5   1     0.00   0.05   0.11     0.31  -0.19   0.48     0.39   0.46  -0.07
+                      4                      5                      6
+                      E                      E                     A1
+ Frequencies --   1647.8696              1647.8696              3164.8197
+ Red. masses --      1.0078                 1.0078                 1.0078
+ Frc consts  --      1.6124                 1.6124                 5.9475
+ IR Inten    --      0.0000                 0.0000                 0.0000
+  Atom  AN      X      Y      Z        X      Y      Z        X      Y      Z
+     1   6    -0.00  -0.00  -0.00    -0.00   0.00  -0.00    -0.00   0.00   0.00
+     2   1     0.41  -0.20  -0.21    -0.00   0.36  -0.35     0.29   0.29   0.29
+     3   1    -0.41   0.20  -0.21     0.00  -0.36  -0.35    -0.29  -0.29   0.29
+     4   1    -0.41  -0.20   0.21     0.00   0.36   0.35    -0.29   0.29  -0.29
+     5   1     0.41   0.20   0.21    -0.00  -0.36   0.35     0.29  -0.29  -0.29
+                      7                      8                      9
+                     T2                     T2                     T2
+ Frequencies --   3285.6202              3285.6202              3285.6202
+ Red. masses --      1.1025                 1.1025                 1.1025
+ Frc consts  --      7.0121                 7.0121                 7.0121
+ IR Inten    --      0.0000                 0.0000                 0.0000
+  Atom  AN      X      Y      Z        X      Y      Z        X      Y      Z
+     1   6    -0.02   0.07  -0.06     0.09  -0.00  -0.02    -0.02  -0.07  -0.06
+     2   1     0.04   0.06   0.03    -0.19  -0.20  -0.21     0.46   0.45   0.45
+     3   1    -0.36  -0.35   0.35    -0.34  -0.35   0.35     0.06   0.05  -0.08
+     4   1     0.45  -0.45   0.45    -0.20   0.21  -0.22     0.04  -0.06   0.04
+     5   1     0.05  -0.04  -0.07    -0.35   0.36   0.36    -0.35   0.34   0.34
+
+ -------------------
+ - Thermochemistry -
+ -------------------
+ Temperature   298.150 Kelvin.  Pressure   1.00000 Atm.
+ Atom     1 has atomic number  6 and mass  12.00000
+ Atom     2 has atomic number  1 and mass   1.00783
+ Atom     3 has atomic number  1 and mass   1.00783
+ Atom     4 has atomic number  1 and mass   1.00783
+ Atom     5 has atomic number  1 and mass   1.00783
+ Molecular mass:    16.03130 amu.
+ Principal axes and moments of inertia in atomic units:
+                           1         2         3
+     Eigenvalues --    11.41906  11.41906  11.41906
+           X           -0.05875   0.17620   0.98260
+           Y            0.99158  -0.10351   0.07785
+           Z            0.11543   0.97890  -0.16863
+ This molecule is a spherical top.
+ Rotational symmetry number 12.
+ Rotational temperatures (Kelvin)      7.58503     7.58503     7.58503
+ Rotational constants (GHZ):         158.04646   158.04646   158.04646
+ Zero-point vibrational energy     123318.6 (Joules/Mol)
+                                   29.47384 (Kcal/Mol)
+ Vibrational temperatures:   2062.17  2062.17  2062.17  2370.92  2370.92
+          (Kelvin)           4553.47  4727.27  4727.27  4727.27
+ 
+ Zero-point correction=                           0.046970 (Hartree/Particle)
+ Thermal correction to Energy=                    0.049827
+ Thermal correction to Enthalpy=                  0.050771
+ Thermal correction to Gibbs Free Energy=         0.029654
+ Sum of electronic and zero-point Energies=            -40.151742
+ Sum of electronic and thermal Energies=               -40.148885
+ Sum of electronic and thermal Enthalpies=             -40.147941
+ Sum of electronic and thermal Free Energies=          -40.169058
+ 
+                     E (Thermal)             CV                S
+                      KCal/Mol        Cal/Mol-Kelvin    Cal/Mol-Kelvin
+ Total                   31.267              6.334             44.445
+ Electronic               0.000              0.000              0.000
+ Translational            0.889              2.981             34.261
+ Rotational               0.889              2.981             10.124
+ Vibrational             29.489              0.372              0.059
+                       Q            Log10(Q)             Ln(Q)
+ Total Bot       0.229159D-13        -13.639863        -31.406945
+ Total V=0       0.921753D+08          7.964615         18.339203
+ Vib (Bot)       0.249529D-21        -21.602880        -49.742469
+ Vib (V=0)       0.100369D+01          0.001598          0.003680
+ Electronic      0.100000D+01          0.000000          0.000000
+ Translational   0.252294D+07          6.401907         14.740936
+ Rotational      0.364007D+02          1.561110          3.594588
+ ***** Axes restored to original set *****
+ -------------------------------------------------------------------
+ Center     Atomic                   Forces (Hartrees/Bohr)
+ Number     Number              X              Y              Z
+ -------------------------------------------------------------------
+      1        6           0.000000000   -0.000000000   -0.000000000
+      2        1          -0.000000001    0.000000003    0.000000000
+      3        1          -0.000000001   -0.000000002   -0.000000003
+      4        1          -0.000000001   -0.000000002    0.000000003
+      5        1           0.000000003   -0.000000000   -0.000000000
+ -------------------------------------------------------------------
+ Cartesian Forces:  Max     0.000000003 RMS     0.000000002
+ Force constants in Cartesian coordinates: 
+                1             2             3             4             5 
+      1  0.606565D+00
+      2  0.000000D+00  0.606565D+00
+      3  0.000000D+00  0.000000D+00  0.606565D+00
+      4 -0.858969D-01  0.929708D-01  0.000000D+00  0.865788D-01
+      5  0.929708D-01 -0.315999D+00  0.000000D+00 -0.102242D+00  0.339627D+00
+      6  0.000000D+00  0.000000D+00 -0.530280D-01  0.000000D+00  0.000000D+00
+      7 -0.859004D-01 -0.464872D-01 -0.805190D-01  0.414306D-02  0.511840D-02
+      8 -0.464872D-01 -0.118769D+00 -0.113868D+00 -0.128892D-01 -0.133545D-01
+      9 -0.805190D-01 -0.113868D+00 -0.250255D+00  0.153098D-02  0.142850D-02
+     10 -0.859001D-01 -0.464871D-01  0.805187D-01  0.414304D-02  0.511841D-02
+     11 -0.464871D-01 -0.118769D+00  0.113868D+00 -0.128891D-01 -0.133546D-01
+     12  0.805187D-01  0.113868D+00 -0.250255D+00 -0.153100D-02 -0.142853D-02
+     13 -0.348868D+00  0.358538D-05  0.000000D+00 -0.896805D-02 -0.965776D-03
+     14  0.358540D-05 -0.530280D-01  0.000000D+00  0.350493D-01  0.308138D-02
+     15  0.000000D+00  0.000000D+00 -0.530280D-01  0.000000D+00  0.000000D+00
+                6             7             8             9            10 
+      6  0.504323D-01
+      7  0.119273D-01  0.865827D-01
+      8 -0.279778D-01  0.511229D-01  0.122729D+00
+      9  0.197349D-02  0.885483D-01  0.125223D+00  0.267326D+00
+     10 -0.119273D-01  0.414333D-02  0.777042D-02 -0.103969D-01  0.865824D-01
+     11  0.279778D-01  0.777038D-02  0.963741D-02 -0.147030D-01  0.511228D-01
+     12  0.197354D-02  0.103968D-01  0.147030D-01 -0.210187D-01 -0.885480D-01
+     13  0.000000D+00 -0.896870D-02  0.483068D-03  0.836545D-03 -0.896865D-02
+     14  0.000000D+00 -0.175245D-01 -0.242832D-03  0.191959D-02 -0.175245D-01
+     15 -0.135131D-02 -0.303535D-01  0.191996D-02  0.197354D-02  0.303535D-01
+               11            12            13            14            15 
+     11  0.122729D+00
+     12 -0.125223D+00  0.267326D+00
+     13  0.483066D-03 -0.836527D-03  0.375773D+00
+     14 -0.242827D-03 -0.191957D-02 -0.394291D-05  0.504323D-01
+     15 -0.191996D-02  0.197349D-02  0.000000D+00  0.000000D+00  0.504323D-01
+ Red2BG is reusing G-inverse.
+ Force constants in internal coordinates: 
+                1             2             3             4             5 
+      1  0.375773D+00
+      2  0.207881D-02  0.375773D+00
+      3  0.207881D-02  0.207881D-02  0.375773D+00
+      4  0.207881D-02  0.207881D-02  0.207881D-02  0.375773D+00
+      5  0.199487D-02  0.199487D-02 -0.125259D-02 -0.273714D-02  0.218229D-01
+      6  0.312644D-02 -0.806822D-03  0.347942D-02 -0.579903D-02 -0.957859D-02
+      7  0.610966D-02 -0.490346D-02 -0.542790D-02  0.422170D-02 -0.144234D-01
+      8 -0.806822D-03  0.312644D-02  0.347942D-02 -0.579903D-02 -0.957859D-02
+      9 -0.490346D-02  0.610966D-02 -0.542790D-02  0.422170D-02 -0.144234D-01
+     10 -0.552068D-02 -0.552068D-02  0.514954D-02  0.589182D-02  0.261811D-01
+     11 -0.386367D-02 -0.386367D-02 -0.272730D-02  0.104546D-01 -0.149962D-01
+     12  0.318185D-02  0.318185D-02 -0.818189D-02  0.181820D-02  0.906249D-02
+     13 -0.418976D-02  0.737161D-02 -0.409095D-02  0.909099D-03  0.453125D-02
+     14 -0.737161D-02  0.418976D-02  0.409095D-02 -0.909099D-03 -0.453125D-02
+                6             7             8             9            10 
+      6  0.412494D-01
+      7 -0.250065D-01  0.805817D-01
+      8 -0.210295D-02  0.270745D-01  0.412494D-01
+      9  0.270745D-01 -0.388950D-01 -0.250065D-01  0.805817D-01
+     10 -0.316359D-01 -0.293312D-01 -0.316359D-01 -0.293312D-01  0.957531D-01
+     11 -0.122409D-01  0.163986D-01 -0.122409D-01  0.163986D-01  0.668070D-02
+     12 -0.104649D-01  0.786274D-02 -0.104649D-01  0.786274D-02 -0.385810D-02
+     13 -0.158338D-01 -0.757817D-03  0.536886D-02  0.862056D-02 -0.192905D-02
+     14 -0.536886D-02 -0.862056D-02  0.158338D-01  0.757817D-03  0.192905D-02
+               11            12            13            14 
+     11  0.333585D-01
+     12  0.171764D-02  0.207291D-01
+     13  0.858820D-03  0.103645D-01  0.210377D-01
+     14 -0.858820D-03 -0.103645D-01  0.106732D-01  0.210377D-01
+ Leave Link  716 at Mon Jun 23 02:10:30 2025, MaxMem=  2684354560 cpu:               0.0 elap:               0.0
+ (Enter /curc/sw/install/gaussian/g16_c.02/g16/l9999.exe)
  Unable to Open any file for archive entry.
- 1\1\GINC-C3CPU-A2-U32-1\FOpt\External=' python utils.py'\ZDO\C1H4\BASI
- 7344\10-Sep-2024\0\\# opt external=" python utils.py"\\test external\\
- 0,1\C,-0.808823549,0.294117597,0.\H,-0.4452380225,-0.7342972277,-0.000
- 0008759\H,-0.4452186117,0.8083178937,0.8906295476\H,-0.4452200421,0.80
- 83189052,-0.8906295476\H,-1.8996175197,0.2941308168,0.0000008759\\Vers
- ion=ES64L-G16RevC.02\HF=-40.198712\RMSD=0.000e+00\RMSF=3.234e-06\Dipol
- e=0.,0.,0.\PG=TD [O(C1),4C3(H1)]\\@
+ 1\1\GINC-C3CPU-A2-U32-1\Freq\External=' python utils.py'\ZDO\C1H4\BASI
+ 7344\23-Jun-2025\0\\#p opt=(calcall,nomicro,noeigentest) external=" py
+ thon utils.py"\\test external\\0,1\C,-0.808823549,0.294117597,0.\H,-0.
+ 4452409115,-0.7342890561,-0.0000008759\H,-0.4452215008,0.808313808,0.8
+ 906224709\H,-0.4452229312,0.8083148195,-0.8906224709\H,-1.8996088525,0
+ .2941308167,0.0000008759\\Version=ES64L-G16RevC.02\HF=-40.198712\RMSD=
+ 0.000e+00\RMSF=1.792e-09\ZeroPoint=0.0469696\Thermal=0.0498268\ETot=-4
+ 0.1488851\HTot=-40.1479409\GTot=-40.169058\Dipole=0.,0.,0.\PG=TD [O(C1
+ ),4C3(H1)]\NImag=0\\0.60656538,0.,0.60656538,0.,0.,0.60656538,-0.08589
+ 687,0.09297075,0.00000008,0.08657883,0.09297075,-0.31599915,-0.0000002
+ 2,-0.10224178,0.33962688,0.00000008,-0.00000022,-0.05302801,-0.0000000
+ 9,0.00000025,0.05043229,-0.08590038,-0.04648721,-0.08051899,0.00414306
+ ,0.00511840,0.01192730,0.08658269,-0.04648721,-0.11876898,-0.11386778,
+ -0.01288918,-0.01335454,-0.02797783,0.05112291,0.12272894,-0.08051899,
+ -0.11386778,-0.25025468,0.00153098,0.00142850,0.00197349,0.08854833,0.
+ 12522266,0.26732637,-0.08590012,-0.04648712,0.08051867,0.00414304,0.00
+ 511841,-0.01192730,0.00414333,0.00777042,-0.01039686,0.08658240,-0.046
+ 48712,-0.11876924,0.11386800,-0.01288913,-0.01335457,0.02797783,0.0077
+ 7038,0.00963741,-0.01470298,0.05112281,0.12272922,0.08051867,0.1138680
+ 0,-0.25025468,-0.00153100,-0.00142853,0.00197354,0.01039683,0.01470300
+ ,-0.02101873,-0.08854798,-0.12522290,0.26732637,-0.34886801,0.00000359
+ ,0.00000024,-0.00896805,-0.00096578,0.,-0.00896870,0.00048307,0.000836
+ 55,-0.00896865,0.00048307,-0.00083653,0.37577341,0.00000359,-0.0530280
+ 1,0.,0.03504935,0.00308138,-0.00000003,-0.01752448,-0.00024283,0.00191
+ 959,-0.01752451,-0.00024283,-0.00191957,-0.00000394,0.05043229,0.00000
+ 024,0.,-0.05302801,0.00000003,0.,-0.00135131,-0.03035348,0.00191996,0.
+ 00197354,0.03035347,-0.00191996,0.00197349,-0.00000026,0.,0.05043229\\
+ 0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.,0.\\\@
  The archive entry for this job was punched.
 
 
- THERE ARE PEOPLE SO ADDICTED TO EXAGERATING THEY
- CAN'T TELL THE TRUTH WITHOUT LYING. -- FORTUNE COOKIE
- Job cpu time:       0 days  0 hours  0 minutes  0.3 seconds.
- Elapsed time:       0 days  0 hours  0 minutes 22.0 seconds.
+ The lyf so short, the craft so long to lerne.
+                             -- Chaucer
+ Job cpu time:       0 days  0 hours  0 minutes  0.5 seconds.
+ Elapsed time:       0 days  0 hours  0 minutes  7.5 seconds.
  File lengths (MBytes):  RWF=      6 Int=      0 D2E=      0 Chk=      1 Scr=      1
- Normal termination of Gaussian 16 at Tue Sep 10 13:08:08 2024.
+ Normal termination of Gaussian 16 at Mon Jun 23 02:10:30 2025.
